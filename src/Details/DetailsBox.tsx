@@ -2,14 +2,16 @@ import { DetailsHTMLAttributes, FC } from "react";
 import { cn } from "../utils/cn";
 
 interface DetailsBoxProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
-  icon?: JSX.Element;
+  startIcon?: JSX.Element;
+  endIcon?: JSX.Element;
   title: string;
   detailsClass?: string;
   summaryClass?: string;
 }
 
 export const DetailsBox: FC<DetailsBoxProps> = ({
-  icon,
+  startIcon,
+  endIcon,
   title,
   detailsClass,
   summaryClass,
@@ -24,8 +26,9 @@ export const DetailsBox: FC<DetailsBoxProps> = ({
         )}
       >
         <span className="flex gap-3 items-center">
-          {icon && icon}
+          {startIcon && startIcon}
           {title}
+          {endIcon && endIcon}
         </span>
       </summary>
       {children}
