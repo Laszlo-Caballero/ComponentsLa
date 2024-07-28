@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, FC } from "react";
 import { cn } from "../utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const button = cva("text-slate-700 rounded-md flex gap-x-2", {
+const button = cva("text-slate-700 rounded-md flex gap-x-2 items-center", {
   variants: {
     variant: {
       outline: "border border-slate-700 bg-transparent",
@@ -45,6 +45,7 @@ export const Button: FC<ButtonProps> = ({
   disabled,
   colorVariant,
   size,
+  text,
   startIcon,
   endIcon,
   ...props
@@ -52,7 +53,7 @@ export const Button: FC<ButtonProps> = ({
   return (
     <button
       className={cn(
-        button({ variant, colorVariant, size, className }),
+        button({ variant, colorVariant, size, text, className }),
         disabled && "text-gray-400 font-semibold"
       )}
       {...props}
