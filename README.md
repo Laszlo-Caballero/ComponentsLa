@@ -12,6 +12,8 @@ proximos proyectos
   npm install componentsla
 ```
 
+- pnpm
+
 ```bash
   pnpm install componentsla
 ```
