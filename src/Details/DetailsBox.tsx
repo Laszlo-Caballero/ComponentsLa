@@ -20,7 +20,6 @@ export const DetailsBox: FC<DetailsBoxProps> = ({
   summaryClass,
   children,
 }) => {
-  // const [animationState, setAnimationState] = useState<boolean>(false);
   const [openDetails, setOpenDetails] = useState<boolean>(false);
   return (
     <details className={cn("w-full px-4 cursor-pointer", detailsClass)}>
