@@ -18,7 +18,7 @@ proximos proyectos
 
 ## Uso
 
-```typescript
+```ts
 import { Typography } from "componentsla";
 
 export default function Page() {
