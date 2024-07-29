@@ -31,3 +31,40 @@ export default function Page() {
   );
 }
 ```
+
+## Aportar
+
+1. Clonar proyecto
+
+```bash
+  git clone https://github.com/Laszlo-Caballero/ComponentsLa.git
+```
+
+2. Instalar dependencias
+
+```bash
+  npm install
+```
+
+3. Compilar proyecto
+
+```bash
+  npm run build
+```
+
+## TODOS
+
+- [ ] Añadir test para componentes
+- Mas componentes
+  - [ ] Listas
+  - [ ] Carrusel
+  - [ ] Modal window
+  - [ ] Paginacion
+  - [ ] Tablas ❔
+  - [ ] Menu
+- Universal
+  - [ ] Animaciones
+  - [ ] Standar de colores
+- Iconos
+  - [ ] Añadir iconos
+  - [ ] Ponerlos en un solo archivo ❔
