@@ -4,4 +4,30 @@ Libreria de componentes de react basado en **Material Ui**,
 creado con el hecho de aprender a hacer una libreria y usarlo en mis
 proximos proyectos
 
-[link](https://www.example.com/my%20great%20page)
+## Instalacion
+
+- npm
+
+```bash
+  npm install componentsla
+```
+
+```bash
+  pnpm install componentsla
+```
+
+## Uso
+
+```typescript
+import { Typography } from "componentsla";
+
+export default function Page() {
+  return (
+    <div>
+      <Typography variant="p" text="paragraph">
+        Parrafo
+      </Typography>
+    </div>
+  );
+}
+```
