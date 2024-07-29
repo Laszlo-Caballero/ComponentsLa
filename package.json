@@ -45,8 +45,9 @@
     "react-router-dom": "^6.25.1"
   },
   "dependencies": {
+    "@midudev/tailwind-animations": "^0.0.7",
     "class-variance-authority": "^0.7.0",
-    "tailwind-merge": "^2.4.0",
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.4.0"
   }
 }
