@@ -63,7 +63,7 @@ export default function Page() {
   - [ ] Modal window
   - [ ] Paginacion
   - [ ] Tablas ❔
-  - [ ✅ ] Menu
+  - [x] Menu
 - Universal
   - [ ] Animaciones
   - [ ] Standar de colores
