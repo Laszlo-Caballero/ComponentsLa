@@ -7,3 +7,5 @@ export { LinkContent } from "./Details/LinkContent";
 export { Typography } from "./Typography/Typography";
 export { ArrowDown } from "./Icons/ArrowDown";
 export { ArrowLeft } from "./Icons/ArrowRigth";
+export { Menu } from "./Menu/Menu";
+export { MenuItem } from "./Menu/MenuItem";
