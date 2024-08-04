@@ -67,6 +67,7 @@ export default function Page() {
 - Universal
   - [ ] Animaciones
   - [ ] Standar de colores
+  - [ ] Remover JSX en los props de los componentes
 - Iconos
   - [ ] Añadir iconos
   - [ ] Ponerlos en un solo archivo ❔
