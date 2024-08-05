@@ -20,7 +20,7 @@ interface CarouselProps extends HTMLAttributes<HTMLDivElement> {
   indicators?: boolean;
 }
 
-const Carousel: FC<CarouselProps> = ({
+export const Carousel: FC<CarouselProps> = ({
   children,
   heigth,
   previousIcon,
@@ -113,5 +113,3 @@ const Carousel: FC<CarouselProps> = ({
     </section>
   );
 };
-
-export default Carousel;
