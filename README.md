@@ -67,7 +67,7 @@ export default function Page() {
     - [x] ver los botones de next o previous
     - [x] pedir width
     - [x] any en el interfaz del as ❔
-  - [ ] Modal window
+  - [x] Modal window
   - [ ] Paginacion
   - [ ] Tablas ❔
   - [x] Menu

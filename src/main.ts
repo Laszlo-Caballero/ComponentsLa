@@ -12,3 +12,4 @@ export { PreviousIcon } from "./Icons/PreviousIcon";
 export { Menu } from "./Menu/Menu";
 export { MenuItem } from "./Menu/MenuItem";
 export { Carousel } from "./Carousel/Carousel";
+export { Modal } from "./Modal/Modal";
