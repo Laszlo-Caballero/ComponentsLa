@@ -13,21 +13,21 @@ export const Modal: FC<ModalProps> = ({
   onClose,
   ...props
 }) => {
-  if (!open) return null;
-
   return (
-    <div
-      className="absolute top-0 left-0 w-full h-full z-[1000] flex items-center justify-center"
-      {...props}
-      onClick={onClose}
-    >
+    open && (
       <div
-        className={cn(
-          "absolute top-0 left-0 w-full h-full bg-slate-950 opacity-30",
-          className
-        )}
-      ></div>
-      {children}
-    </div>
+        className="absolute top-0 left-0 w-full h-full z-[1000] flex items-center justify-center"
+        {...props}
+        onClick={onClose}
+      >
+        <div
+          className={cn(
+            "absolute top-0 left-0 w-full h-full bg-slate-950 opacity-30",
+            className
+          )}
+        ></div>
+        {children}
+      </div>
+    )
   );
 };
