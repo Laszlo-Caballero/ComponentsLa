@@ -61,6 +61,7 @@ export default function Page() {
   - [ ] Listas
   - [x] Carrusel
     - [ ] resposive desing
+    - [ ] classNames dentro del componente
   - [ ] Modal window
   - [ ] Paginacion
   - [ ] Tablas ❔
