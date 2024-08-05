@@ -59,7 +59,8 @@ export default function Page() {
 - [ ] Añadir test para componentes
 - Mas componentes
   - [ ] Listas
-  - [ ] Carrusel
+  - [x] Carrusel
+    - [ ] resposive desing
   - [ ] Modal window
   - [ ] Paginacion
   - [ ] Tablas ❔
