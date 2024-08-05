@@ -61,12 +61,12 @@ export default function Page() {
   - [ ] Listas
   - [x] Carrusel
     - [ ] resposive desing
-    - [ ] claseNames dentro del componente y mejorar el cn
-    - [ ] pedir segundos al hacer el autoplay
-    - [ ] navegacion ciclica
-    - [ ] ver los botones de next o previous
-    - [ ] pedir width
-    - [ ] any en el interfaz del as ❔
+    - [x] claseNames dentro del componente y mejorar el cn
+    - [x] pedir segundos al hacer el autoplay
+    - [x] navegacion ciclica
+    - [x] ver los botones de next o previous
+    - [x] pedir width
+    - [x] any en el interfaz del as ❔
   - [ ] Modal window
   - [ ] Paginacion
   - [ ] Tablas ❔
