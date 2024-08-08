@@ -5,6 +5,7 @@ import {
   HTMLAttributes,
   isValidElement,
   ReactElement,
+  ReactNode,
   useEffect,
   useState,
 } from "react";
@@ -113,9 +114,7 @@ export const Carousel: FC<CarouselProps> = ({
         {Children.map(children, (child, index) => {
           if (isValidElement(child)) {
             return cloneElement(
-              child as ReactElement<
-                HTMLAttributes<HTMLDivElement | HTMLImageElement>
-              >,
+              child as ReactElement<HTMLAttributes<ReactNode>>,
               {
                 className: cn("absolute w-auto", child.props.className),
                 style: {
