@@ -106,7 +106,7 @@ export const Carousel: FC<CarouselProps> = ({
             {previousIcon ? (
               previousIcon
             ) : (
-              <PreviousIcon width={20} heigth={20} />
+              <PreviousIcon width={20} height={20} />
             )}
           </div>
         )}
