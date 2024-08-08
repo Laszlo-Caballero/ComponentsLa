@@ -2,18 +2,18 @@ import { FC, SVGProps } from "react";
 
 interface PreviousIconProps extends SVGProps<SVGSVGElement> {
   width: number;
-  heigth: number;
+  height: number;
 }
 
 export const PreviousIcon: FC<PreviousIconProps> = ({
   width,
-  heigth,
+  height,
   ...props
 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
-    height={heigth}
+    height={height}
     fill="none"
     viewBox="0 0 24 24"
     {...props}
