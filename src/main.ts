@@ -1,5 +1,4 @@
 import "./index.css";
-export { Title } from "./Title/title";
 export { Button } from "./Button/Button";
 export { Box } from "./Box/Box";
 export { DetailsBox } from "./Details/DetailsBox";
@@ -13,3 +12,4 @@ export { Menu } from "./Menu/Menu";
 export { MenuItem } from "./Menu/MenuItem";
 export { Carousel } from "./Carousel/Carousel";
 export { Modal } from "./Modal/Modal";
+export { Pagination } from "./Pagination/Pagination";
