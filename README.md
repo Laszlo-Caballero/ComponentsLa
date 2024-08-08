@@ -68,7 +68,9 @@ export default function Page() {
     - [x] pedir width
     - [x] any en el interfaz del as ❔
   - [x] Modal window
-  - [ ] Paginacion
+  - [x] Paginacion
+    - [ ] custom Icon
+    - [ ] Icon FirstButton y LastButton con sus funcionalidades
   - [ ] Tablas ❔
   - [x] Menu
 - Universal
