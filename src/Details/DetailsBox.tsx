@@ -19,10 +19,14 @@ export const DetailsBox: FC<DetailsBoxProps> = ({
   detailsClass,
   summaryClass,
   children,
+  ...props
 }) => {
   const [openDetails, setOpenDetails] = useState<boolean>(false);
   return (
-    <details className={cn("w-full px-4 cursor-pointer", detailsClass)}>
+    <details
+      className={cn("w-full px-4 cursor-pointer", detailsClass)}
+      {...props}
+    >
       <summary
         className={cn(
           "list-none flex items-center gap-3 py-4 w-full justify-between",

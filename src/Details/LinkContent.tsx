@@ -8,9 +8,10 @@ export const LinkContent: FC<LinkContentProps> = ({
   children,
   to,
   className,
+  ...props
 }) => {
   return (
-    <Link className={(cn("px-6 py-2 block"), className)} to={to}>
+    <Link className={(cn("px-6 py-2 block"), className)} to={to} {...props}>
       {children}
     </Link>
   );

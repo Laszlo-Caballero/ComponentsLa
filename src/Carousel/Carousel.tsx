@@ -39,6 +39,7 @@ export const Carousel: FC<CarouselProps> = ({
   cycleNavigation = true,
   className,
   classNameContainer,
+  ...props
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [onHover, setOnHover] = useState<boolean>(buttons);
@@ -82,7 +83,7 @@ export const Carousel: FC<CarouselProps> = ({
   }, [autoplay, time, cycleNavigation]);
 
   return (
-    <section className={classNameContainer}>
+    <section className={classNameContainer} {...props}>
       <article
         className={cn(
           `relative flex items-center justify-between select-none`,

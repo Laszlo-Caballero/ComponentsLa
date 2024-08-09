@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, useState } from "react";
+import { CSSProperties, FC, HTMLAttributes, useState } from "react";
 import { NextIcon } from "../Icons/NextIcon";
 import { PreviousIcon } from "../Icons/PreviousIcon";
 import { cn } from "../utils/cn";
@@ -31,7 +31,7 @@ interface PaginationProps
   extends HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof pagination> {
   count?: number;
-  classNameItem?: ClassValue;
+  classNameItem?: CSSProperties;
 }
 
 export const Pagination: FC<PaginationProps> = ({
@@ -41,6 +41,7 @@ export const Pagination: FC<PaginationProps> = ({
   variantColor,
   classNameItem,
   className,
+  ...props
 }) => {
   const [number, setNumber] = useState<number>(1);
 
@@ -49,7 +50,10 @@ export const Pagination: FC<PaginationProps> = ({
   };
 
   return (
-    <nav className={cn("flex items-center gap-x-4 select-none", className)}>
+    <nav
+      className={cn("flex items-center gap-x-4 select-none", className)}
+      {...props}
+    >
       <PreviousIcon
         height={16}
         width={16}
