@@ -4,7 +4,6 @@ import { PreviousIcon } from "../Icons/PreviousIcon";
 import { cn } from "../utils/cn";
 import { GenerateArray } from "../utils/GenerateArray";
 import { cva, VariantProps } from "class-variance-authority";
-import { ClassValue } from "clsx";
 
 const pagination = cva("px-3 py-1 cursor-pointer", {
   variants: {
