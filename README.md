@@ -73,6 +73,7 @@ export default function Page() {
     - [ ] Icon FirstButton y LastButton con sus funcionalidades
   - [ ] Tablas ❔
   - [x] Menu
+  - [x] Tabs
 - Universal
   - [ ] Animaciones
   - [ ] Standar de colores
