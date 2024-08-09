@@ -76,7 +76,8 @@ export default function Page() {
 - Universal
   - [ ] Animaciones
   - [ ] Standar de colores
-  - [ ] Remover JSX en los props de los componentes
+  - [ ] Remover JSX en los props de los componentes por ReactElement
 - Iconos
   - [ ] Añadir iconos
   - [ ] Ponerlos en un solo archivo ❔
+  - [ ] Poner prop de color en hexadecimal

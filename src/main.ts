@@ -13,3 +13,4 @@ export { MenuItem } from "./Menu/MenuItem";
 export { Carousel } from "./Carousel/Carousel";
 export { Modal } from "./Modal/Modal";
 export { Pagination } from "./Pagination/Pagination";
+export { Nav } from "./Nav/Nav";
