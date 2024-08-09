@@ -1,13 +1,14 @@
-import { DetailsHTMLAttributes, FC } from "react";
+import { CSSProperties, DetailsHTMLAttributes, FC, ReactElement } from "react";
 import { cn } from "../utils/cn";
 import { useState } from "react";
 
 interface DetailsBoxProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
-  startIcon?: JSX.Element;
-  endIcon?: JSX.Element;
+  startIcon?: ReactElement;
+  endIcon?: ReactElement;
   title: string;
-  detailsClass?: string;
-  summaryClass?: string;
+  detailsClass?: CSSProperties;
+  summaryClass?: CSSProperties;
+  spamClass?: CSSProperties;
 }
 
 export const DetailsBox: FC<DetailsBoxProps> = ({
@@ -16,6 +17,7 @@ export const DetailsBox: FC<DetailsBoxProps> = ({
   title,
   detailsClass,
   summaryClass,
+  spamClass,
   children,
   ...props
 }) => {
@@ -34,7 +36,7 @@ export const DetailsBox: FC<DetailsBoxProps> = ({
           setOpenDetails(!openDetails);
         }}
       >
-        <span className="flex gap-3 items-center">
+        <span className={cn("flex gap-3 items-center", spamClass)}>
           {startIcon && startIcon}
           {title}
           {endIcon && endIcon}
