@@ -5,7 +5,6 @@ import { useState } from "react";
 interface DetailsBoxProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
   startIcon?: JSX.Element;
   endIcon?: JSX.Element;
-  openIcon?: JSX.Element;
   title: string;
   detailsClass?: string;
   summaryClass?: string;
@@ -14,7 +13,6 @@ interface DetailsBoxProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
 export const DetailsBox: FC<DetailsBoxProps> = ({
   startIcon,
   endIcon,
-  openIcon,
   title,
   detailsClass,
   summaryClass,
@@ -37,9 +35,9 @@ export const DetailsBox: FC<DetailsBoxProps> = ({
         }}
       >
         <span className="flex gap-3 items-center">
-          {startIcon && (openDetails ? startIcon : openIcon)}
+          {startIcon && startIcon}
           {title}
-          {endIcon && (openDetails ? endIcon : openIcon)}
+          {endIcon && endIcon}
         </span>
       </summary>
       {children}

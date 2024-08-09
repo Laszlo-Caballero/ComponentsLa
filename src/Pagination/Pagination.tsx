@@ -114,7 +114,7 @@ export const Pagination: FC<PaginationProps> = ({
       </div>
 
       <NextIcon
-        heigth={20}
+        height={20}
         width={20}
         className="cursor-pointer"
         onClick={() => {

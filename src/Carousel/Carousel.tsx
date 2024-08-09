@@ -136,7 +136,7 @@ export const Carousel: FC<CarouselProps> = ({
             className="z-[100] p-1 backdrop-blur-3xl bg-slate-400 rounded-lg mr-2 cursor-pointer"
             onClick={cycleNavigation ? goToNextCycle : goToNext}
           >
-            {nextIcon ? nextIcon : <NextIcon width={20} heigth={20} />}
+            {nextIcon ? nextIcon : <NextIcon width={20} height={20} />}
           </div>
         )}
       </article>
