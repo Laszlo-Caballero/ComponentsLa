@@ -1,4 +1,4 @@
-import { CSSProperties, FC, HTMLAttributes, useState } from "react";
+import { FC, HTMLAttributes, useState } from "react";
 import { NextIcon } from "../Icons/NextIcon";
 import { PreviousIcon } from "../Icons/PreviousIcon";
 import { cn } from "../utils/cn";
@@ -30,7 +30,7 @@ interface PaginationProps
   extends HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof pagination> {
   count?: number;
-  classNameItem?: CSSProperties;
+  classNameItem?: string;
 }
 
 export const Pagination: FC<PaginationProps> = ({

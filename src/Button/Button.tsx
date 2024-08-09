@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FC } from "react";
+import { ButtonHTMLAttributes, FC, ReactElement } from "react";
 import { cn } from "../utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -34,8 +34,8 @@ interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof button> {
   disabled?: boolean;
-  startIcon?: JSX.Element;
-  endIcon?: JSX.Element;
+  startIcon?: ReactElement;
+  endIcon?: ReactElement;
 }
 
 export const Button: FC<ButtonProps> = ({

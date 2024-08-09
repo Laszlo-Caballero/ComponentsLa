@@ -1,4 +1,4 @@
-import { CSSProperties, DetailsHTMLAttributes, FC, ReactElement } from "react";
+import { DetailsHTMLAttributes, FC, ReactElement } from "react";
 import { cn } from "../utils/cn";
 import { useState } from "react";
 
@@ -6,9 +6,9 @@ interface DetailsBoxProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
   startIcon?: ReactElement;
   endIcon?: ReactElement;
   title: string;
-  detailsClass?: CSSProperties;
-  summaryClass?: CSSProperties;
-  spamClass?: CSSProperties;
+  detailsClass?: string;
+  summaryClass?: string;
+  spamClass?: string;
 }
 
 export const DetailsBox: FC<DetailsBoxProps> = ({
