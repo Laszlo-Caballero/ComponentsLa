@@ -1,6 +1,6 @@
 {
   "name": "componentsla",
-  "version": "0.1.54",
+  "version": "0.1.55",
   "type": "module",
   "files": [
     "dist"
@@ -41,7 +41,8 @@
   },
   "peerDependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "componentsla-icons": "^0.0.1"
   },
   "optionalDependencies": {
     "react-router-dom": "^6.25.1"

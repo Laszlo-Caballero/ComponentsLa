@@ -10,8 +10,7 @@ import {
   useState,
 } from "react";
 import { cn } from "../utils/cn";
-import { PreviousIcon } from "../Icons/PreviousIcon";
-import { NextIcon } from "../Icons/NextIcon";
+import { PreviousIcon, NextIcon } from "componentsla-icons";
 
 interface CarouselProps extends HTMLAttributes<HTMLDivElement> {
   heigth: string;

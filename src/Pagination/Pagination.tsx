@@ -1,6 +1,5 @@
 import { FC, HTMLAttributes, useState } from "react";
-import { NextIcon } from "../Icons/NextIcon";
-import { PreviousIcon } from "../Icons/PreviousIcon";
+import { NextIcon, PreviousIcon } from "componentsla-icons";
 import { cn } from "../utils/cn";
 import { GenerateArray } from "../utils/GenerateArray";
 import { cva, VariantProps } from "class-variance-authority";
