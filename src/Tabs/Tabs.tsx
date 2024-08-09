@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes } from "react";
-import { Button } from "componentsla";
+import { Button } from "../Button/Button";
 import { cn } from "../utils/cn";
 
 interface TabsProps extends HTMLAttributes<HTMLDivElement> {
