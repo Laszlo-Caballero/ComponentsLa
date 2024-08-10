@@ -53,8 +53,8 @@ export const Button: FC<ButtonProps> = ({
   return (
     <button
       className={cn(
-        button({ variant, colorVariant, size, text, className }),
-        disabled && "text-gray-400 font-semibold"
+        disabled && "bg-gray-500 text-gray-400 font-semibold",
+        button({ variant, colorVariant, size, text, className })
       )}
       {...props}
       disabled={disabled}
