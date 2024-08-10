@@ -2,11 +2,11 @@ import { ButtonHTMLAttributes, FC, ReactElement } from "react";
 import { cn } from "../utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const button = cva("text-slate-700 rounded-md flex gap-x-2 items-center", {
+const button = cva("text-blue-400 rounded-md flex gap-x-2 items-center", {
   variants: {
     variant: {
       outline: "border border-slate-700 bg-transparent",
-      border: "border border-slate-700 rounded-xl",
+      contained: "border border-slate-700 rounded-xl bg-blue-500",
       text: "bg-transparent ",
     },
     text: {
