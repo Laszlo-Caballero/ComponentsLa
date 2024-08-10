@@ -50,16 +50,14 @@ export const Button: FC<ButtonProps> = ({
   endIcon,
   ...props
 }) => {
-  const disabledClasses = cn({
-    "text-gray-400 bg-gray-500": disabled && variant === "contained",
-    "text-gray-400 border-gray-500": disabled && variant === "outline",
-    "text-gray-400 bg-transparent": disabled && variant === "text",
-  });
   return (
     <button
       className={cn(
         button({ variant, colorVariant, size, text }),
-        disabledClasses,
+
+        disabled && variant === "text" && "text-gray-400",
+        disabled && variant === "contained" && "text-gray-400 bg-gray-700",
+        disabled && variant === "outline" && "text-gray-400 border-gray-500",
         className
       )}
       {...props}
