@@ -6,7 +6,7 @@ const button = cva("text-blue-400 rounded-md flex gap-x-2 items-center", {
   variants: {
     variant: {
       outline: "border border-slate-700 bg-transparent",
-      contained: "border border-slate-700 rounded-xl bg-blue-500",
+      contained: "border border-slate-700 bg-blue-500 text-slate-800",
       text: "bg-transparent ",
     },
     text: {
