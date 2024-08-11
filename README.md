@@ -75,7 +75,7 @@ export default function Page() {
     - [x] pedir iconos y eliminar componentsla-icons ⚠️
   - [x] Modal window
   - [x] Paginacion
-    - [ ] custom Icon y eliminar componentsla-icons ⚠️
+    - [x] custom Icon y eliminar componentsla-icons ⚠️
     - [ ] Icon FirstButton y LastButton con sus funcionalidades
   - [ ] Tablas ❔
   - [x] Menu
