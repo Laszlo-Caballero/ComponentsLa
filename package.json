@@ -71,7 +71,6 @@
     "vite-plugin-dts": "^4.0.0-beta.1"
   },
   "peerDependencies": {
-    "componentsla-icons": "^0.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
