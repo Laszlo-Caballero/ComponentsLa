@@ -1,3 +1,10 @@
+## [0.1.10](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.1.9...v0.1.10) (2024-08-11)
+
+
+### Bug Fixes
+
+* **Fix build:** test build and publish ([6bcf476](https://github.com/Laszlo-Caballero/ComponentsLa/commit/6bcf476b94a05dcd3875ba2ff5374e166b5f8246))
+
 ## [0.1.9](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.1.8...v0.1.9) (2024-08-11)
 
 
