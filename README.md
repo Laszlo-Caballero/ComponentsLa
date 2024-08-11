@@ -78,6 +78,9 @@ export default function Page() {
     - [x] custom Icon y eliminar componentsla-icons ⚠️
     - [x] Icon FirstButton y LastButton con sus funcionalidades
     - [x] icon opcional
+    - [x] Arreglar variantes
+    - [ ] Get Page
+    - [ ] Arreglar el classItem
   - [ ] Tablas ❔
   - [x] Menu
     - [ ] Posicionarse arriba, abajo, izquierda, derecha totalmente
