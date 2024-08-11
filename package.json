@@ -1,6 +1,6 @@
 {
   "name": "componentsla",
-  "version": "0.1.63",
+  "version": "0.1.7",
   "type": "module",
   "files": [
     "dist"
