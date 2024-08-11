@@ -72,7 +72,7 @@ export default function Page() {
     - [x] ver los botones de next o previous
     - [x] pedir width
     - [x] any en el interfaz del as ❔
-    - [ ] pedir iconos y eliminar componentsla-icons ⚠️
+    - [x] pedir iconos y eliminar componentsla-icons ⚠️
   - [x] Modal window
   - [x] Paginacion
     - [ ] custom Icon y eliminar componentsla-icons ⚠️
