@@ -10,13 +10,12 @@ import {
   useState,
 } from "react";
 import { cn } from "../utils/cn";
-import { PreviousIcon, NextIcon } from "componentsla-icons";
 
 interface CarouselProps extends HTMLAttributes<HTMLDivElement> {
   heigth: string;
   width?: string;
-  previousIcon?: ReactElement;
-  nextIcon?: ReactElement;
+  previousIcon: ReactElement;
+  nextIcon: ReactElement;
   autoplay?: boolean;
   indicators?: boolean;
   buttons?: boolean;
@@ -103,11 +102,7 @@ export const Carousel: FC<CarouselProps> = ({
             className="z-[100] p-1 backdrop-blur-3xl bg-slate-400 rounded-lg ml-2 cursor-pointer"
             onClick={cycleNavigation ? goToPreviousCycle : goToPrevious}
           >
-            {previousIcon ? (
-              previousIcon
-            ) : (
-              <PreviousIcon width={20} height={20} />
-            )}
+            {previousIcon && previousIcon}
           </div>
         )}
 
@@ -135,7 +130,7 @@ export const Carousel: FC<CarouselProps> = ({
             className="z-[100] p-1 backdrop-blur-3xl bg-slate-400 rounded-lg mr-2 cursor-pointer"
             onClick={cycleNavigation ? goToNextCycle : goToNext}
           >
-            {nextIcon ? nextIcon : <NextIcon width={20} height={20} />}
+            {nextIcon && nextIcon}
           </div>
         )}
       </article>
