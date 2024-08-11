@@ -57,7 +57,12 @@ export default function Page() {
 ## TODOS
 
 - [ ] Añadir test para componentes
+- [ ] componentes polymorficos
 - Mas componentes
+  - [x] Box
+    - [ ] componente polymofico
+  - [x] Typography
+    - [ ] componente polymorfico
   - [ ] Listas
   - [x] Carrusel
     - [ ] resposive desing
