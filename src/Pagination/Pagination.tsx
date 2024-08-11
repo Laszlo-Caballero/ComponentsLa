@@ -1,5 +1,5 @@
-import { FC, HTMLAttributes, useState } from "react";
-import { NextIcon, PreviousIcon } from "componentsla-icons";
+import { FC, HTMLAttributes, ReactElement, useState } from "react";
+// import { NextIcon, PreviousIcon } from "componentsla-icons";
 import { cn } from "../utils/cn";
 import { GenerateArray } from "../utils/GenerateArray";
 import { cva, VariantProps } from "class-variance-authority";
@@ -30,12 +30,14 @@ interface PaginationProps
     VariantProps<typeof pagination> {
   count: number;
   classNameItem?: string;
-  // PrevIcon: ReactElement;
-  // NextIcon: ReactElement;
+  PrevIcon: ReactElement;
+  NextIcon: ReactElement;
 }
 
 export const Pagination: FC<PaginationProps> = ({
   count,
+  PrevIcon,
+  NextIcon,
   vartiant,
   shape,
   variantColor,
@@ -54,14 +56,14 @@ export const Pagination: FC<PaginationProps> = ({
       className={cn("flex items-center gap-x-4 select-none", className)}
       {...props}
     >
-      <PreviousIcon
-        height={16}
-        width={16}
+      <div
         className={cn("cursor-pointer")}
         onClick={() => {
           setNumber((prevCount) => (prevCount > 1 ? prevCount - 1 : 1));
         }}
-      />
+      >
+        {PrevIcon}
+      </div>
 
       <div className="flex gap-x-2">
         <p
@@ -114,14 +116,14 @@ export const Pagination: FC<PaginationProps> = ({
         </p>
       </div>
 
-      <NextIcon
-        height={20}
-        width={20}
+      <div
         className="cursor-pointer"
         onClick={() => {
           setNumber((prevCount) => (prevCount < count ? prevCount + 1 : count));
         }}
-      />
+      >
+        {NextIcon}
+      </div>
     </nav>
   );
 };
