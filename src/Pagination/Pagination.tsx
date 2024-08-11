@@ -1,28 +1,9 @@
 import { FC, HTMLAttributes, ReactElement, useState } from "react";
 import { cn } from "../utils/cn";
 import { GenerateArray } from "../utils/GenerateArray";
-import { cva, VariantProps } from "class-variance-authority";
-
-const pagination = cva("px-3 py-1 cursor-pointer", {
-  variants: {
-    vartiant: {
-      outline: "border border-slate-700 bg-transparent",
-      text: "bg-transparent",
-    },
-    shape: {
-      circular: "rounded-full",
-      rounded: "rounded-md",
-    },
-    variantColor: {
-      primary: "bg-blue-400",
-      secondary: " bg-pink-400",
-    },
-  },
-  defaultVariants: {
-    vartiant: "outline",
-    shape: "circular",
-  },
-});
+import { VariantProps } from "class-variance-authority";
+import { PaginationItem } from "./PaginationItem";
+import { pagination } from "./cva";
 
 interface PaginationProps
   extends HTMLAttributes<HTMLDivElement>,
@@ -41,7 +22,7 @@ export const Pagination: FC<PaginationProps> = ({
   NextIcon,
   FirstButton,
   LastButton,
-  vartiant,
+  variant,
   shape,
   variantColor,
   classNameItem,
@@ -49,10 +30,6 @@ export const Pagination: FC<PaginationProps> = ({
   ...props
 }) => {
   const [number, setNumber] = useState<number>(1);
-
-  const setPage = (number: number) => {
-    setNumber(number);
-  };
 
   return (
     <nav
@@ -82,54 +59,31 @@ export const Pagination: FC<PaginationProps> = ({
       )}
 
       <div className="flex gap-x-2">
-        <p
-          className={cn(
-            pagination({ vartiant, shape, variantColor }),
-            number == 1 && "bg-slate-600 cursor-default",
-            classNameItem
-          )}
-          onClick={() => {
-            setPage(1);
-          }}
-        >
-          1
-        </p>
+        <PaginationItem
+          page={number}
+          setPage={(number) => setNumber(number)}
+          value={1}
+          {...{ variant, variantColor, shape, classNameItem }}
+        />
 
         {GenerateArray(count, number).map((value, i) => {
           return (
-            <p
+            <PaginationItem
               key={i}
-              className={
-                typeof value == "number"
-                  ? cn(
-                      pagination({ vartiant, shape, variantColor }),
-                      number == value && "bg-slate-600 cursor-default",
-                      classNameItem
-                    )
-                  : "px-2 py-1"
-              }
-              onClick={() => {
-                if (typeof value == "number") {
-                  setPage(value);
-                }
-              }}
-            >
-              {value}
-            </p>
+              page={number}
+              setPage={(number) => setNumber(number)}
+              value={value}
+              {...{ variant, variantColor, shape, classNameItem }}
+            />
           );
         })}
-        <p
-          className={cn(
-            pagination({ vartiant, shape, variantColor }),
-            number == count && "bg-slate-600 cursor-default",
-            classNameItem
-          )}
-          onClick={() => {
-            setPage(count);
-          }}
-        >
-          {count}
-        </p>
+
+        <PaginationItem
+          page={number}
+          setPage={(number) => setNumber(number)}
+          value={count}
+          {...{ variant, variantColor, shape, classNameItem }}
+        />
       </div>
 
       {NextIcon && (
