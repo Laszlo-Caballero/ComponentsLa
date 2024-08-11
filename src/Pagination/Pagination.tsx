@@ -28,12 +28,14 @@ const pagination = cva("px-3 py-1 cursor-pointer", {
 interface PaginationProps
   extends HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof pagination> {
-  count?: number;
+  count: number;
   classNameItem?: string;
+  // PrevIcon: ReactElement;
+  // NextIcon: ReactElement;
 }
 
 export const Pagination: FC<PaginationProps> = ({
-  count = 10,
+  count,
   vartiant,
   shape,
   variantColor,
