@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.1.10...v0.2.0) (2024-08-11)
+
+
+### Features
+
+* **Pagination:** add Prop FirstButton and LastButton ([1d8f994](https://github.com/Laszlo-Caballero/ComponentsLa/commit/1d8f994e7c01375f7ae59a5b3ac9a9b048cc3dcc))
+
 ## [0.1.10](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.1.9...v0.1.10) (2024-08-11)
 
 
