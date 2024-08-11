@@ -74,6 +74,10 @@ export default function Page() {
     - [ ] Icon FirstButton y LastButton con sus funcionalidades
   - [ ] Tablas ❔
   - [x] Menu
+    - [ ] Posicionarse arriba, abajo, izquierda, derecha totalmente
+    - [ ] Para mantener las variantes debe haber un outline, text y el contained
+    - [ ] Arreglar el position ⚠️
+    - [ ] Arreglar el open
   - [x] Tabs
 - Universal
   - [ ] Animaciones

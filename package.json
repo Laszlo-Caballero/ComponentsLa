@@ -1,6 +1,6 @@
 {
   "name": "componentsla",
-  "version": "0.1.621",
+  "version": "0.1.63",
   "type": "module",
   "files": [
     "dist"
@@ -14,6 +14,42 @@
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "release": {
+    "branches": [
+      "main",
+      "next",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ]
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    "@semantic-release/npm",
+    "@semantic-release/github",
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "package.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -22,6 +58,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/node": "^22.0.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -40,9 +78,9 @@
     "vite-plugin-dts": "^4.0.0-beta.1"
   },
   "peerDependencies": {
+    "componentsla-icons": "^0.0.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "componentsla-icons": "^0.0.1"
+    "react-dom": "^18.3.1"
   },
   "optionalDependencies": {
     "react-router-dom": "^6.25.1"
