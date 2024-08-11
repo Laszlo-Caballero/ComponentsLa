@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.2.0...v0.2.1) (2024-08-11)
+
+
+### Bug Fixes
+
+* **Pagination:** Fix variants ([c154562](https://github.com/Laszlo-Caballero/ComponentsLa/commit/c154562daf8d268ee4024872c857dd6ab54c036b))
+
 # [0.2.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.1.10...v0.2.0) (2024-08-11)
 
 
