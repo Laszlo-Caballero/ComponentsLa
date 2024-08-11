@@ -145,7 +145,7 @@ export const Carousel: FC<CarouselProps> = ({
           className="flex justify-center gap-x-4 mt-2"
           style={{ width: width }}
         >
-          {Children.map(children, (_, index) => {
+          {[...Array(Children.count(children))].map((index) => {
             return (
               <div
                 className={cn(
