@@ -76,7 +76,8 @@ export default function Page() {
   - [x] Modal window
   - [x] Paginacion
     - [x] custom Icon y eliminar componentsla-icons ⚠️
-    - [ ] Icon FirstButton y LastButton con sus funcionalidades
+    - [x] Icon FirstButton y LastButton con sus funcionalidades
+    - [x] icon opcional
   - [ ] Tablas ❔
   - [x] Menu
     - [ ] Posicionarse arriba, abajo, izquierda, derecha totalmente
