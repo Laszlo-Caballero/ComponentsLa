@@ -1,5 +1,4 @@
 import { FC, HTMLAttributes, ReactElement, useState } from "react";
-// import { NextIcon, PreviousIcon } from "componentsla-icons";
 import { cn } from "../utils/cn";
 import { GenerateArray } from "../utils/GenerateArray";
 import { cva, VariantProps } from "class-variance-authority";
@@ -30,14 +29,18 @@ interface PaginationProps
     VariantProps<typeof pagination> {
   count: number;
   classNameItem?: string;
-  PrevIcon: ReactElement;
-  NextIcon: ReactElement;
+  PrevIcon?: ReactElement;
+  NextIcon?: ReactElement;
+  FirstButton?: ReactElement;
+  LastButton?: ReactElement;
 }
 
 export const Pagination: FC<PaginationProps> = ({
   count,
   PrevIcon,
   NextIcon,
+  FirstButton,
+  LastButton,
   vartiant,
   shape,
   variantColor,
@@ -56,14 +59,27 @@ export const Pagination: FC<PaginationProps> = ({
       className={cn("flex items-center gap-x-4 select-none", className)}
       {...props}
     >
-      <div
-        className={cn("cursor-pointer")}
-        onClick={() => {
-          setNumber((prevCount) => (prevCount > 1 ? prevCount - 1 : 1));
-        }}
-      >
-        {PrevIcon}
-      </div>
+      {FirstButton && (
+        <div
+          className={cn("cursor-pointer")}
+          onClick={() => {
+            setNumber(1);
+          }}
+        >
+          {FirstButton}
+        </div>
+      )}
+
+      {PrevIcon && (
+        <div
+          className={cn("cursor-pointer")}
+          onClick={() => {
+            setNumber((prevCount) => (prevCount > 1 ? prevCount - 1 : 1));
+          }}
+        >
+          {PrevIcon}
+        </div>
+      )}
 
       <div className="flex gap-x-2">
         <p
@@ -116,14 +132,29 @@ export const Pagination: FC<PaginationProps> = ({
         </p>
       </div>
 
-      <div
-        className="cursor-pointer"
-        onClick={() => {
-          setNumber((prevCount) => (prevCount < count ? prevCount + 1 : count));
-        }}
-      >
-        {NextIcon}
-      </div>
+      {NextIcon && (
+        <div
+          className="cursor-pointer"
+          onClick={() => {
+            setNumber((prevCount) =>
+              prevCount < count ? prevCount + 1 : count
+            );
+          }}
+        >
+          {NextIcon}
+        </div>
+      )}
+
+      {LastButton && (
+        <div
+          className={cn("cursor-pointer")}
+          onClick={() => {
+            setNumber(count);
+          }}
+        >
+          {LastButton}
+        </div>
+      )}
     </nav>
   );
 };
