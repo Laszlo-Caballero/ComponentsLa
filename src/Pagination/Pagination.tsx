@@ -1,60 +1,84 @@
-import { FC, HTMLAttributes, ReactElement, useState } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import { cn } from "../utils/cn";
 import { GenerateArray } from "../utils/GenerateArray";
-import { VariantProps } from "class-variance-authority";
 import { PaginationItem } from "./PaginationItem";
-import { pagination } from "./cva";
-
-interface PaginationProps
-  extends HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof pagination> {
-  count: number;
-  classNameItem?: string;
-  PrevIcon?: ReactElement;
-  NextIcon?: ReactElement;
-  FirstButton?: ReactElement;
-  LastButton?: ReactElement;
-}
+import { LastLeftIconPre } from "./../Icons/LastLeftIconPre";
+import { LeftIconPre } from "./../Icons/LeftIconPre";
+import { NextIconPre } from "./../Icons/NextIconPre";
+import { LastRightIconPre } from "./../Icons/LastRightIconPre";
+import { PaginationProps } from "./TypePagination";
 
 export const Pagination: FC<PaginationProps> = ({
   count,
   PrevIcon,
+  hidePrevButton = false,
   NextIcon,
+  hideNextButton = false,
   FirstButton,
+  showFistButton = false,
   LastButton,
+  showLastButton = false,
   variant,
   shape,
   variantColor,
+  disabled = false,
+  page,
   classNameItem,
   className,
+  size,
+  getPage,
   ...props
 }) => {
-  const [number, setNumber] = useState<number>(1);
+  const [number, setNumber] = useState<number>(page ? page : 1);
+
+  useEffect(() => {
+    getPage?.(number);
+  }, [number, getPage]);
+
+  const pages = useMemo(() => {
+    return GenerateArray(count, number);
+  }, [number, count]);
 
   return (
     <nav
       className={cn("flex items-center gap-x-4 select-none", className)}
       {...props}
     >
-      {FirstButton && (
+      {showFistButton && (
         <div
-          className={cn("cursor-pointer")}
+          className={cn(
+            disabled ? "cursor-default opacity-45" : "cursor-pointer"
+          )}
           onClick={() => {
-            setNumber(1);
+            if (!disabled) {
+              setNumber(1);
+            }
           }}
         >
-          {FirstButton}
+          {FirstButton ? (
+            FirstButton
+          ) : (
+            <LastRightIconPre width={20} height={20} color="#FFFFFF" />
+          )}
         </div>
       )}
 
-      {PrevIcon && (
+      {!hidePrevButton && (
         <div
-          className={cn("cursor-pointer")}
+          className={cn(
+            disabled ? "cursor-default opacity-45" : "cursor-pointer"
+          )}
           onClick={() => {
-            setNumber((prevCount) => (prevCount > 1 ? prevCount - 1 : 1));
+            if (!disabled) {
+              setNumber((prevCount) => (prevCount > 1 ? prevCount - 1 : 1));
+            }
           }}
         >
-          {PrevIcon}
+          {PrevIcon ? (
+            PrevIcon
+          ) : (
+            <LeftIconPre width={20} height={20} color="#FFFFFF" />
+          )}
         </div>
       )}
 
@@ -63,17 +87,24 @@ export const Pagination: FC<PaginationProps> = ({
           page={number}
           setPage={(number) => setNumber(number)}
           value={1}
-          {...{ variant, variantColor, shape, classNameItem }}
+          {...{ variant, variantColor, shape, classNameItem, disabled, size }}
         />
 
-        {GenerateArray(count, number).map((value, i) => {
+        {pages.map((value, i) => {
           return (
             <PaginationItem
               key={i}
               page={number}
               setPage={(number) => setNumber(number)}
               value={value}
-              {...{ variant, variantColor, shape, classNameItem }}
+              {...{
+                variant,
+                variantColor,
+                shape,
+                classNameItem,
+                disabled,
+                size,
+              }}
             />
           );
         })}
@@ -82,31 +113,47 @@ export const Pagination: FC<PaginationProps> = ({
           page={number}
           setPage={(number) => setNumber(number)}
           value={count}
-          {...{ variant, variantColor, shape, classNameItem }}
+          {...{ variant, variantColor, shape, classNameItem, disabled, size }}
         />
       </div>
 
-      {NextIcon && (
+      {!hideNextButton && (
         <div
-          className="cursor-pointer"
+          className={cn(
+            disabled ? "cursor-default opacity-45" : "cursor-pointer"
+          )}
           onClick={() => {
-            setNumber((prevCount) =>
-              prevCount < count ? prevCount + 1 : count
-            );
+            if (!disabled) {
+              setNumber((prevCount) =>
+                prevCount < count ? prevCount + 1 : count
+              );
+            }
           }}
         >
-          {NextIcon}
+          {NextIcon ? (
+            NextIcon
+          ) : (
+            <NextIconPre width={20} height={20} color="#FFFFFF" />
+          )}
         </div>
       )}
 
-      {LastButton && (
+      {showLastButton && (
         <div
-          className={cn("cursor-pointer")}
+          className={cn(
+            disabled ? "cursor-default opacity-45" : "cursor-pointer"
+          )}
           onClick={() => {
-            setNumber(count);
+            if (!disabled) {
+              setNumber(count);
+            }
           }}
         >
-          {LastButton}
+          {LastButton ? (
+            LastButton
+          ) : (
+            <LastLeftIconPre width={20} height={20} color="#FFFFFF" />
+          )}
         </div>
       )}
     </nav>

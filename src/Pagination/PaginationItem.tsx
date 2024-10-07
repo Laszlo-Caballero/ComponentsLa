@@ -9,8 +9,8 @@ interface PaginationItemProps
   page: number;
   value: number | string;
   setPage: (number: number) => void;
-
   classNameItem?: string;
+  disabled?: boolean;
 }
 
 export const PaginationItem: FC<PaginationItemProps> = ({
@@ -19,7 +19,9 @@ export const PaginationItem: FC<PaginationItemProps> = ({
   variant,
   shape,
   variantColor,
+  disabled = false,
   classNameItem,
+  size,
   setPage,
 }) => {
   return (
@@ -27,17 +29,22 @@ export const PaginationItem: FC<PaginationItemProps> = ({
       className={
         typeof value == "number"
           ? cn(
-              pagination({ shape }),
+              pagination({ variant }),
               page == value
-                ? pagination({ variantColor, variant }) + " cursor-default"
-                : " bg-transparent",
-              classNameItem
+                ? pagination({ shape, variantColor, size }) + " cursor-default"
+                : pagination({ shape, size }) + " bg-transparent",
+              classNameItem,
+              page === value && disabled
+                ? " bg-slate-500 opacity-45"
+                : disabled && "opacity-45"
             )
-          : "px-2 py-1"
+          : ""
       }
       onClick={() => {
         if (typeof value == "number") {
-          setPage(value);
+          if (!disabled) {
+            setPage(value);
+          }
         }
       }}
     >
