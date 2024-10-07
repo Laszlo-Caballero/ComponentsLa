@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.2.1...v0.2.2) (2024-10-07)
+
+
+### Bug Fixes
+
+* **Carousel:** using useCallback ([75f0650](https://github.com/Laszlo-Caballero/ComponentsLa/commit/75f065089eb81d21fef961478237f622b0802f89))
+* **icons:** add typeIcons ([bb82ad9](https://github.com/Laszlo-Caballero/ComponentsLa/commit/bb82ad95505c4ca2b4e6843708c09067bc104f0b))
+* **Pagination:** fix all and getPage ([ca116dd](https://github.com/Laszlo-Caballero/ComponentsLa/commit/ca116ddbe760b4160929d39deb1600e6f16e28ef))
+
 ## [0.2.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.2.0...v0.2.1) (2024-08-11)
 
 
