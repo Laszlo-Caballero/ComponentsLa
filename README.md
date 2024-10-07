@@ -58,6 +58,8 @@ export default function Page() {
 
 - [ ] Añadir test para componentes
 - [ ] componentes polymorficos
+- [ ] useCallback y useMemo
+- [ ] resposive components
 - Mas componentes
   - [x] Box
     - [ ] componente polymofico
@@ -73,14 +75,17 @@ export default function Page() {
     - [x] pedir width
     - [x] any en el interfaz del as ❔
     - [x] pedir iconos y eliminar componentsla-icons ⚠️
+    - [ ] iconos predeterminados ❓
   - [x] Modal window
   - [x] Paginacion
     - [x] custom Icon y eliminar componentsla-icons ⚠️
     - [x] Icon FirstButton y LastButton con sus funcionalidades
     - [x] icon opcional
     - [x] Arreglar variantes
-    - [ ] Get Page
-    - [ ] Arreglar el classItem
+    - [x] Get Page
+    - [x] Arreglar el classItem
+    - [x] disable
+    - [x] iconos predeterminados ❓
   - [ ] Tablas ❔
   - [x] Menu
     - [ ] Posicionarse arriba, abajo, izquierda, derecha totalmente
@@ -92,6 +97,7 @@ export default function Page() {
   - [ ] Animaciones
   - [ ] Standar de colores
   - [x] Remover JSX en los props de los componentes por ReactElement
+  - [ ] Remover el ReactElement por ReactNode
 - Iconos
   - [ ] Añadir iconos
   - [x] Ponerlos en un solo archivo ⚠️
