@@ -25,15 +25,15 @@ interface TypographyProps
   variant: variant;
 }
 export const Typography: FC<TypographyProps> = ({
-  variant,
+  variant: Component = "p",
   children,
   className,
   text,
   ...rest
 }) => {
-  return React.createElement(
-    variant,
-    { className: cn(typography({ text }), className), ...rest },
-    children
+  return (
+    <Component className={cn(typography({ text }), className)} {...rest}>
+      {children}
+    </Component>
   );
 };

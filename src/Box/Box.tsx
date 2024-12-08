@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { type BoxProps } from "./TypesBox";
 
 export const Box: FC<BoxProps> = ({
-  component,
+  component: Component = "div",
   className,
   children,
   height,
@@ -13,13 +13,13 @@ export const Box: FC<BoxProps> = ({
   sx,
   ...rest
 }) => {
-  return React.createElement(
-    component,
-    {
-      className,
-      style: { height, width, display, alignItems, justifyContent, ...sx },
-      ...rest,
-    },
-    children
+  return (
+    <Component
+      className={className}
+      style={{ height, width, display, alignItems, justifyContent, ...sx }}
+      {...rest}
+    >
+      {children}
+    </Component>
   );
 };
