@@ -57,14 +57,14 @@ export default function Page() {
 ## TODOS
 
 - [ ] Añadir test para componentes
-- [ ] componentes polymorficos
-- [ ] useCallback y useMemo
+- [x] componentes polymorficos
+- [x] useCallback y useMemo
 - [ ] resposive components
 - Mas componentes
   - [x] Box
-    - [ ] componente polymofico
+    - [x] componente polymofico
   - [x] Typography
-    - [ ] componente polymorfico
+    - [x] componente polymorfico
   - [ ] Listas
   - [x] Carrusel
     - [ ] resposive desing

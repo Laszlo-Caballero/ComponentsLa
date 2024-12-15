@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import React, { FC, HTMLAttributes } from "react";
+import { FC, HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 
 type variant = "h1" | "h2" | "h3" | "h4" | "p" | "span";

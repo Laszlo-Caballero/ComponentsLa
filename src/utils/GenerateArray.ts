@@ -1,33 +1,25 @@
 type Pages = string | number;
 
-export function GenerateArray(count: number, number: number): Pages[] {
+export function GenerateArray(count: number, currentPage: number): Pages[] {
   const pages: Pages[] = [];
   const maxPages = 4;
 
   if (count <= 7) {
-    for (let i = 2; i < count; i++) {
-      pages.push(i);
-    }
-    return pages;
+    return Array.from({ length: count - 2 }, (_, i) => i + 2);
   }
 
-  if (number <= maxPages) {
-    for (let i = 2; i <= maxPages + 1; i++) {
-      pages.push(i);
-    }
+  if (currentPage <= maxPages) {
+    pages.push(...Array.from({ length: maxPages }, (_, i) => i + 2));
     pages.push("...");
-  } else if (number <= count - maxPages) {
+  } else if (currentPage <= count - maxPages) {
     pages.push("...");
-    for (let i = number - 1; i <= number + 1; i++) {
-      pages.push(i);
-    }
+    pages.push(...Array.from({ length: 3 }, (_, i) => currentPage - 1 + i));
     pages.push("...");
   } else {
     pages.push("...");
-    const startPage = count - maxPages;
-    for (let i = startPage; i < count; i++) {
-      pages.push(i);
-    }
+    pages.push(
+      ...Array.from({ length: maxPages }, (_, i) => count - maxPages + i)
+    );
   }
 
   return pages;
