@@ -1,3 +1,10 @@
+## [0.2.4](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.2.3...v0.2.4) (2024-12-31)
+
+
+### Bug Fixes
+
+* **package.json:** eliminar dependencia innecesaria @midudev/tailwind-animations ([8bca269](https://github.com/Laszlo-Caballero/ComponentsLa/commit/8bca2697bd2cf69aed8bbe84a27f20b77d4f5eee))
+
 ## [0.2.3](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.2.2...v0.2.3) (2024-12-15)
 
 
