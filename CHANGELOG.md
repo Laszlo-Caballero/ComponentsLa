@@ -1,3 +1,11 @@
+## [0.2.3](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.2.2...v0.2.3) (2024-12-15)
+
+
+### Bug Fixes
+
+* **README, GenerateArray:** actualizar tareas pendientes y mejorar la función GenerateArray ([dd14cc6](https://github.com/Laszlo-Caballero/ComponentsLa/commit/dd14cc650d171ddaa543c61d9124058fb9a95062))
+* **Typography, Box:** Componentes polimorficos ([f92ba63](https://github.com/Laszlo-Caballero/ComponentsLa/commit/f92ba634c63a403eb09aebabe3dc24297c527fba))
+
 ## [0.2.2](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.2.1...v0.2.2) (2024-10-07)
 
 
