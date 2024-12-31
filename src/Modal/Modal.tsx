@@ -1,32 +1,29 @@
-import { FC, HTMLAttributes } from "react";
+import { Dispatch, FC, HTMLAttributes, SetStateAction } from "react";
 import { cn } from "../utils/cn";
+import { OutsideContainer } from "../Hooks/OutsideClick";
 
 interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
-  onClose?: () => void;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 export const Modal: FC<ModalProps> = ({
   children,
   className,
   open = false,
-  onClose,
+  setIsOpen,
   ...props
 }) => {
   return (
     open && (
       <div
-        className="absolute top-0 left-0 w-full h-full z-[1000] flex items-center justify-center"
+        className={cn(
+          "absolute top-0 left-0 w-full h-full z-[1000] flex items-center justify-center backdrop-blur-sm",
+          className
+        )}
         {...props}
-        onClick={onClose}
       >
-        <div
-          className={cn(
-            "absolute top-0 left-0 w-full h-full bg-slate-950 opacity-30",
-            className
-          )}
-        ></div>
-        {children}
+        <OutsideContainer setIsOpen={setIsOpen}>{children}</OutsideContainer>
       </div>
     )
   );

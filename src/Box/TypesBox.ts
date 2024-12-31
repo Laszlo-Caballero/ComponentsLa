@@ -12,7 +12,7 @@ type justifyContent =
 
 export interface BoxProps extends HTMLAttributes<HTMLElement> {
   component: component;
-  children: ReactNode;
+  children?: ReactNode;
   height?: number;
   width?: number | string;
   display?: display;

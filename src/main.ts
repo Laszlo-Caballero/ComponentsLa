@@ -11,3 +11,5 @@ export { Pagination } from "./Pagination/Pagination";
 export { Nav } from "./Nav/Nav";
 export { Tabs } from "./Tabs/Tabs";
 export { Tab } from "./Tabs/Tab";
+export { Aside } from "./Aside/Aside";
+export { OutsideContainer } from "./Hooks/OutsideClick";
