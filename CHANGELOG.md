@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.2.4...v0.3.0) (2024-12-31)
+
+
+### Features
+
+* **Components:** new Component Aside and OutSideClick and fix modal Component ([e86b286](https://github.com/Laszlo-Caballero/ComponentsLa/commit/e86b286c77dec0ff6a375ad3b0ffc07143ed5799))
+
 ## [0.2.4](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.2.3...v0.2.4) (2024-12-31)
 
 
