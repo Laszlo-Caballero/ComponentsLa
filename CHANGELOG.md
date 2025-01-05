@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.3.0...v0.4.0) (2025-01-05)
+
+
+### Features
+
+* **components:** refactor class name props to use customClassName type ([8821eee](https://github.com/Laszlo-Caballero/ComponentsLa/commit/8821eee981dbb1fd95aa7675d1898915f5ae3fb0))
+
 # [0.3.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.2.4...v0.3.0) (2024-12-31)
 
 
