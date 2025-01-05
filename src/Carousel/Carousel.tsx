@@ -11,24 +11,36 @@ import {
   useState,
 } from "react";
 import { cn } from "../utils/cn";
+import { LastLeftIcon } from "../Icons/LastLeftIcon";
 
-interface CarouselProps extends HTMLAttributes<HTMLDivElement> {
-  heigth: string;
+type CarruselCustomClass = {
+  container?: string;
+  icons?: string;
+  indicators?: string;
+};
+
+interface CarouselProps {
   width?: string;
-  previousIcon: ReactElement;
-  nextIcon: ReactElement;
+  height: string;
+  previousIcon?: ReactElement;
+  nextIcon?: ReactElement;
   autoplay?: boolean;
   indicators?: boolean;
   buttons?: boolean;
   time?: number;
   cycleNavigation?: boolean;
-  classNameContainer?: string;
+  customClass?: CarruselCustomClass;
+  onChangeItem?: (index: number) => void;
+  onGoToNext?: () => void;
+  onGoToPrevious?: () => void;
+  className?: string;
+  children: ReactNode;
 }
 
 export const Carousel: FC<CarouselProps> = ({
   children,
-  heigth,
-  width,
+  width = "100%",
+  height,
   previousIcon,
   nextIcon,
   autoplay = false,
@@ -37,34 +49,44 @@ export const Carousel: FC<CarouselProps> = ({
   time = 3000,
   cycleNavigation = true,
   className,
-  classNameContainer,
-  ...props
+  customClass,
+  onChangeItem,
+  onGoToNext,
+  onGoToPrevious,
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [onHover, setOnHover] = useState<boolean>(buttons);
   const totalChildren = Children.count(children);
 
-  const goToNextCycle = useCallback(() => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalChildren);
-  }, [totalChildren]);
+  useEffect(() => {
+    if (onChangeItem) {
+      onChangeItem(currentIndex);
+    }
+  }, [currentIndex, onChangeItem]);
 
-  const goToPreviousCycle = useCallback(() => {
+  const goToPreviousCycle = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? totalChildren - 1 : prevIndex - 1
     );
+  };
+
+  const goToNextCycle = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalChildren);
   }, [totalChildren]);
 
   const goToNext = useCallback(() => {
     setCurrentIndex((previndex) =>
       previndex < totalChildren - 1 ? previndex + 1 : previndex
     );
-  }, [totalChildren]);
+    onGoToNext?.();
+  }, [totalChildren, onGoToNext]);
 
   const goToPrevious = useCallback(() => {
     if (currentIndex > 0 || currentIndex == totalChildren) {
       setCurrentIndex(currentIndex - 1);
+      onGoToPrevious?.();
     }
-  }, [totalChildren, currentIndex]);
+  }, [currentIndex, totalChildren, onGoToPrevious]);
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -82,13 +104,13 @@ export const Carousel: FC<CarouselProps> = ({
   }, [autoplay, time, cycleNavigation, goToNext, goToNextCycle]);
 
   return (
-    <section className={classNameContainer} {...props}>
+    <section className={cn("h-full w-full", customClass?.container)}>
       <article
         className={cn(
-          `relative flex items-center justify-between select-none`,
+          `relative flex items-center justify-between select-none h-full`,
           className
         )}
-        style={{ height: heigth, width: width }}
+        style={{ width, height }}
         onMouseEnter={() => {
           setOnHover(true);
         }}
@@ -100,10 +122,17 @@ export const Carousel: FC<CarouselProps> = ({
       >
         {onHover && (
           <div
-            className="z-[100] p-1 backdrop-blur-3xl bg-slate-400 rounded-lg ml-2 cursor-pointer"
+            className={cn(
+              "z-[100] p-1 backdrop-blur-3xl bg-slate-400 rounded-lg cursor-pointer",
+              customClass?.icons
+            )}
             onClick={cycleNavigation ? goToPreviousCycle : goToPrevious}
           >
-            {previousIcon && previousIcon}
+            {previousIcon ? (
+              previousIcon
+            ) : (
+              <LastLeftIcon className="w-4 h-4 rotate-180" />
+            )}
           </div>
         )}
 
@@ -112,10 +141,10 @@ export const Carousel: FC<CarouselProps> = ({
             return cloneElement(
               child as ReactElement<HTMLAttributes<ReactNode>>,
               {
-                className: cn("absolute w-auto", child.props.className),
+                className: cn("absolute w-auto px-12", child.props.className),
                 style: {
-                  height: heigth,
                   width: width,
+                  height: height,
                   zIndex: index === currentIndex ? 10 : 0,
                   opacity: index === currentIndex ? 1 : 0,
                   transition: "opacity 0.5s ease",
@@ -128,10 +157,13 @@ export const Carousel: FC<CarouselProps> = ({
 
         {onHover && (
           <div
-            className="z-[100] p-1 backdrop-blur-3xl bg-slate-400 rounded-lg mr-2 cursor-pointer"
+            className={cn(
+              "z-[100] p-1 backdrop-blur-3xl bg-slate-400 rounded-lg ml-2 cursor-pointer",
+              customClass?.icons
+            )}
             onClick={cycleNavigation ? goToNextCycle : goToNext}
           >
-            {nextIcon && nextIcon}
+            {nextIcon ? nextIcon : <LastLeftIcon className="w-4 h-4" />}
           </div>
         )}
       </article>
@@ -141,13 +173,20 @@ export const Carousel: FC<CarouselProps> = ({
           className="flex justify-center gap-x-4 mt-2"
           style={{ width: width }}
         >
-          {[...Array(Children.count(children))].map((index) => {
+          {[...Array(Children.count(children))].map((_, i) => {
             return (
               <div
                 className={cn(
                   "w-3 h-3 rounded-full",
-                  index === currentIndex ? "bg-slate-800" : "bg-slate-500"
+                  i === currentIndex
+                    ? "bg-slate-800"
+                    : "bg-slate-500 cursor-pointer",
+                  customClass?.indicators
                 )}
+                key={i}
+                onClick={() => {
+                  setCurrentIndex(i);
+                }}
               ></div>
             );
           })}
