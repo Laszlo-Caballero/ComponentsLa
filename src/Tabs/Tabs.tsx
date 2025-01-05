@@ -11,7 +11,7 @@ type CustomClassNameType = {
 interface TabsProps extends HTMLAttributes<HTMLDivElement> {
   headers: string[];
   value: number;
-  customClassName: CustomClassNameType;
+  customClassName?: CustomClassNameType;
   onChangeTab: (number: number) => void;
 }
 
@@ -23,11 +23,11 @@ export const Tabs: FC<TabsProps> = ({
   onChangeTab,
 }) => {
   return (
-    <div className={cn("flex flex-col w-full", customClassName.conteiner)}>
+    <div className={cn("flex flex-col w-full", customClassName?.conteiner)}>
       <div
         className={cn(
           "flex border-b border-b-slate-500",
-          customClassName.headers
+          customClassName?.headers
         )}
       >
         {" "}
@@ -39,7 +39,7 @@ export const Tabs: FC<TabsProps> = ({
                 value == index && "border-b text-blue-400 border-b-blue-400"
               )}
               onClick={() => {
-                onChangeTab(index);
+                onChangeTab?.(index);
               }}
               key={index}
             >
@@ -48,7 +48,7 @@ export const Tabs: FC<TabsProps> = ({
           );
         })}
       </div>
-      <div className={cn("w-full", customClassName.children)}>{children}</div>
+      <div className={cn("w-full", customClassName?.children)}>{children}</div>
     </div>
   );
 };
