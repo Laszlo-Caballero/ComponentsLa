@@ -1,3 +1,15 @@
+# [0.7.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.6.5...v0.7.0) (2025-01-05)
+
+
+### Bug Fixes
+
+* **Tabs:** update headers customClassName structure for improved flexibility ([c036d8b](https://github.com/Laszlo-Caballero/ComponentsLa/commit/c036d8bb1196440fa57cd3a3f01c93ae5711ae85))
+
+
+### Features
+
+* **Tabs:** implement TabsProvider for improved state management and flexibility ([75b5d7a](https://github.com/Laszlo-Caballero/ComponentsLa/commit/75b5d7a4dc53d6a2a6fe57e4fcd5755ab03714a4))
+
 ## [0.6.5](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.6.4...v0.6.5) (2025-01-05)
 
 
