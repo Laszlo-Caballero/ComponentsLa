@@ -1,3 +1,10 @@
+## [0.6.4](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.6.3...v0.6.4) (2025-01-05)
+
+
+### Bug Fixes
+
+* **Pagination:** refactor GenerateArray function for improved page generation logic ([42a599b](https://github.com/Laszlo-Caballero/ComponentsLa/commit/42a599bb8272a6a5cdc4bcfd8812f2a43ebbc435))
+
 ## [0.6.3](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.6.2...v0.6.3) (2025-01-05)
 
 
