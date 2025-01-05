@@ -93,6 +93,7 @@ export default function Page() {
     - [ ] Arreglar el open
   - [x] Tabs
     - [x] Contexto para no pedir el value en cada tab
+    - [ ] Vertical Tabs
   - [x] Aside
     - [ ] position fixed
     - [ ] grid colums 1 creo xd 1fr auto 1fr para el header y footer
