@@ -64,7 +64,7 @@ export default function Page() {
   - [ ] Listas
   - [x] Treeview (https://mdbootstrap.com/docs/standard/plugins/tree-view/)
   - [ ] Tooltip
-  - [ ] Toaster (https://react-hot-toast.com/)
+  - [x] Toaster (https://react-hot-toast.com/)
   - [x] Carrusel
     - [ ] resposive desing
     - [x] claseNames dentro del componente y mejorar el cn
