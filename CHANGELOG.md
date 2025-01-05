@@ -1,3 +1,10 @@
+## [0.6.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.6.0...v0.6.1) (2025-01-05)
+
+
+### Bug Fixes
+
+* **TreeView:** add cursor pointer style for better UX on click ([b964268](https://github.com/Laszlo-Caballero/ComponentsLa/commit/b9642687ec54e87eff18a6021757f5d526699c78))
+
 # [0.6.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.5.0...v0.6.0) (2025-01-05)
 
 
