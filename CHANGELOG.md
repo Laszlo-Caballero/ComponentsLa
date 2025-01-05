@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.4.0...v0.5.0) (2025-01-05)
+
+
+### Features
+
+* **Treeview:** add TreeView and TreeItem components; update README and Aside styles ([3c7a31c](https://github.com/Laszlo-Caballero/ComponentsLa/commit/3c7a31c85d2c138bb891e8ba2ec5806fc3f1e112))
+
 # [0.4.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.3.0...v0.4.0) (2025-01-05)
 
 
