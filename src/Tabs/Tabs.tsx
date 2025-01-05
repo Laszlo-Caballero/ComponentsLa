@@ -1,11 +1,14 @@
-import { Button } from "componentsla";
+import { Button } from "../Button/Button";
 import { FC, HTMLAttributes } from "react";
 import { TabsProvider, useTabs } from "./TabsProvider";
 import { cn } from "../utils/cn";
 
 type CustomClassNameType = {
   conteiner?: string;
-  headers?: string;
+  headers?: {
+    container?: string;
+    item?: string;
+  };
   children?: string;
 };
 
@@ -29,7 +32,7 @@ export const ContainerTabs: FC<TabsProps> = ({
       <div
         className={cn(
           "flex border-b border-b-slate-500",
-          customClassName.headers
+          customClassName.headers?.container
         )}
       >
         {" "}
@@ -38,7 +41,8 @@ export const ContainerTabs: FC<TabsProps> = ({
             <Button
               className={cn(
                 "px-8 rounded-none",
-                value == index && "border-b text-blue-400 border-b-blue-400"
+                value == index && "border-b text-blue-400 border-b-blue-400",
+                customClassName.headers?.item
               )}
               onClick={() => {
                 onChangeTab?.(index);
