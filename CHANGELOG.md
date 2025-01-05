@@ -1,3 +1,10 @@
+## [0.6.3](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.6.2...v0.6.3) (2025-01-05)
+
+
+### Bug Fixes
+
+* **TreeView:** enhance custom class name support for better styling options ([b057025](https://github.com/Laszlo-Caballero/ComponentsLa/commit/b0570255a4223b25795def5b2789cf92331b6454))
+
 ## [0.6.2](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.6.1...v0.6.2) (2025-01-05)
 
 
