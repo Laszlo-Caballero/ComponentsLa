@@ -1,5 +1,6 @@
+import { Button } from "componentsla";
 import { FC, HTMLAttributes } from "react";
-import { Button } from "../Button/Button";
+import { TabsProvider, useTabs } from "./TabsProvider";
 import { cn } from "../utils/cn";
 
 type CustomClassNameType = {
@@ -10,24 +11,25 @@ type CustomClassNameType = {
 
 interface TabsProps extends HTMLAttributes<HTMLDivElement> {
   headers: string[];
-  value: number;
-  customClassName?: CustomClassNameType;
-  onChangeTab: (number: number) => void;
+  value?: number;
+  customClassName: CustomClassNameType;
+  onChangeTab?: (number: number) => void;
 }
 
-export const Tabs: FC<TabsProps> = ({
+export const ContainerTabs: FC<TabsProps> = ({
   headers,
-  value,
   customClassName,
   children,
   onChangeTab,
 }) => {
+  const { onChangeTabProvider, value } = useTabs();
+
   return (
-    <div className={cn("flex flex-col w-full", customClassName?.conteiner)}>
+    <div className={cn("flex flex-col w-full", customClassName.conteiner)}>
       <div
         className={cn(
           "flex border-b border-b-slate-500",
-          customClassName?.headers
+          customClassName.headers
         )}
       >
         {" "}
@@ -40,6 +42,8 @@ export const Tabs: FC<TabsProps> = ({
               )}
               onClick={() => {
                 onChangeTab?.(index);
+
+                onChangeTabProvider(index);
               }}
               key={index}
             >
@@ -48,7 +52,15 @@ export const Tabs: FC<TabsProps> = ({
           );
         })}
       </div>
-      <div className={cn("w-full", customClassName?.children)}>{children}</div>
+      <div className={cn("w-full", customClassName.children)}>{children}</div>
     </div>
+  );
+};
+
+export const Tabs: FC<TabsProps> = ({ value, ...props }) => {
+  return (
+    <TabsProvider initialValue={value}>
+      <ContainerTabs {...props} />
+    </TabsProvider>
   );
 };
