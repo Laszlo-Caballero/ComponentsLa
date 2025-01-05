@@ -36,9 +36,10 @@ export const PaginationItem: FC<PaginationItemProps> = ({
               classNameItem,
               page === value && disabled
                 ? " bg-slate-500 opacity-45"
-                : disabled && "opacity-45"
+                : disabled && "opacity-45",
+              "items-center justify-center flex cursor-pointer"
             )
-          : ""
+          : "items-center justify-center flex "
       }
       onClick={() => {
         if (typeof value == "number") {
