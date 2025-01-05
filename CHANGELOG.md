@@ -1,3 +1,10 @@
+## [0.6.2](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.6.1...v0.6.2) (2025-01-05)
+
+
+### Bug Fixes
+
+* **DetailsBox:** make customClassName properties optional to improve flexibility ([ed13b2b](https://github.com/Laszlo-Caballero/ComponentsLa/commit/ed13b2bee94d0d8bb5d138db32d6087b90435b4a))
+
 ## [0.6.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.6.0...v0.6.1) (2025-01-05)
 
 
