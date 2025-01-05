@@ -3,8 +3,8 @@ import { cn } from "../utils/cn";
 import { useState } from "react";
 
 type CustomClassNameType = {
-  span: string;
-  summary: string;
+  span?: string;
+  summary?: string;
 };
 
 interface DetailsBoxProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
@@ -29,13 +29,13 @@ export const DetailsBox: FC<DetailsBoxProps> = ({
       <summary
         className={cn(
           "list-none flex items-center gap-3 py-4 w-full justify-between",
-          customClassName.summary
+          customClassName?.summary
         )}
         onClick={() => {
           setOpenDetails(!openDetails);
         }}
       >
-        <span className={cn("flex gap-3 items-center", customClassName.span)}>
+        <span className={cn("flex gap-3 items-center", customClassName?.span)}>
           {startIcon && startIcon}
           {title}
           {endIcon && endIcon}
