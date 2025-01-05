@@ -62,7 +62,7 @@ export default function Page() {
   - [x] Typography
     - [x] componente polymorfico
   - [ ] Listas
-  - [ ] Treeview (https://mdbootstrap.com/docs/standard/plugins/tree-view/)
+  - [x] Treeview (https://mdbootstrap.com/docs/standard/plugins/tree-view/)
   - [ ] Tooltip
   - [ ] Toaster (https://react-hot-toast.com/)
   - [x] Carrusel

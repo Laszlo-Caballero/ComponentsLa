@@ -13,3 +13,5 @@ export { Tabs } from "./Tabs/Tabs";
 export { Tab } from "./Tabs/Tab";
 export { Aside } from "./Aside/Aside";
 export { OutsideContainer } from "./Hooks/OutsideClick";
+export { TreeView } from "./Treeview/TreeView";
+export { TreeItem } from "./Treeview/TreeItem";
