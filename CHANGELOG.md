@@ -1,3 +1,10 @@
+## [0.7.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.7.0...v0.7.1) (2025-01-05)
+
+
+### Bug Fixes
+
+* **Tabs:** make customClassName optional for improved flexibility ([13d3b6e](https://github.com/Laszlo-Caballero/ComponentsLa/commit/13d3b6e46cbd7938aa55d7bff36554d9e018bbe7))
+
 # [0.7.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.6.5...v0.7.0) (2025-01-05)
 
 
