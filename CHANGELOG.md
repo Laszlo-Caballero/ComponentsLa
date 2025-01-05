@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.7.1...v0.8.0) (2025-01-05)
+
+
+### Features
+
+* **DetailsBox:** make customClassName optional and add open/onOpen props for enhanced functionality ([ed4b187](https://github.com/Laszlo-Caballero/ComponentsLa/commit/ed4b18794eff75f6106d0e185f1990d999af4b3d))
+
 ## [0.7.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.7.0...v0.7.1) (2025-01-05)
 
 
