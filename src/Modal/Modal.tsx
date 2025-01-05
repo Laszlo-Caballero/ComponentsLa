@@ -5,11 +5,13 @@ import { OutsideContainer } from "../Hooks/OutsideClick";
 interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+  classNameContainer?: string;
 }
 
 export const Modal: FC<ModalProps> = ({
   children,
   className,
+  classNameContainer,
   open = false,
   setIsOpen,
   ...props
@@ -19,11 +21,16 @@ export const Modal: FC<ModalProps> = ({
       <div
         className={cn(
           "absolute top-0 left-0 w-full h-full z-[1000] flex items-center justify-center backdrop-blur-sm",
-          className
+          classNameContainer
         )}
         {...props}
       >
-        <OutsideContainer setIsOpen={setIsOpen}>{children}</OutsideContainer>
+        <OutsideContainer
+          setIsOpen={setIsOpen}
+          className={cn("flex items-center justify-center", className)}
+        >
+          {children}
+        </OutsideContainer>
       </div>
     )
   );

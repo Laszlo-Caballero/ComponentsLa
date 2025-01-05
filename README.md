@@ -56,16 +56,15 @@ export default function Page() {
 
 ## TODOS
 
-- [ ] Añadir test para componentes
-- [x] componentes polymorficos
-- [x] useCallback y useMemo
-- [ ] resposive components
 - Mas componentes
   - [x] Box
     - [x] componente polymofico
   - [x] Typography
     - [x] componente polymorfico
   - [ ] Listas
+  - [ ] Treeview (https://mdbootstrap.com/docs/standard/plugins/tree-view/)
+  - [ ] Tooltip
+  - [ ] Toaster (https://react-hot-toast.com/)
   - [x] Carrusel
     - [ ] resposive desing
     - [x] claseNames dentro del componente y mejorar el cn
@@ -93,11 +92,20 @@ export default function Page() {
     - [ ] Arreglar el position ⚠️
     - [ ] Arreglar el open
   - [x] Tabs
+  - [x] Aside
+    - [ ] position fixed
+    - [ ] grid colums 1 creo xd 1fr auto 1fr para el header y footer
 - Universal
   - [ ] Animaciones
   - [ ] Standar de colores
   - [x] Remover JSX en los props de los componentes por ReactElement
   - [ ] Remover el ReactElement por ReactNode
+  - [ ] Hacer Type para CustomClassNames
+  - [ ] Añadir test para componentes
+  - [x] componentes polymorficos
+  - [x] useCallback y useMemo
+  - [ ] resposive components
+  - [ ] useRef en los componentes (principales button, typography, etc)
 - Iconos
   - [ ] Añadir iconos
   - [x] Ponerlos en un solo archivo ⚠️

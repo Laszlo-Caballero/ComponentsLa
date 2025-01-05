@@ -2,12 +2,16 @@ import { DetailsHTMLAttributes, FC, ReactElement } from "react";
 import { cn } from "../utils/cn";
 import { useState } from "react";
 
+type CustomClassNameType = {
+  span: string;
+  summary: string;
+};
+
 interface DetailsBoxProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
   startIcon?: ReactElement;
   endIcon?: ReactElement;
   title: string;
-  summaryClass?: string;
-  spamClass?: string;
+  customClassName: CustomClassNameType;
 }
 
 export const DetailsBox: FC<DetailsBoxProps> = ({
@@ -15,8 +19,7 @@ export const DetailsBox: FC<DetailsBoxProps> = ({
   endIcon,
   title,
   className,
-  summaryClass,
-  spamClass,
+  customClassName,
   children,
   ...props
 }) => {
@@ -26,13 +29,13 @@ export const DetailsBox: FC<DetailsBoxProps> = ({
       <summary
         className={cn(
           "list-none flex items-center gap-3 py-4 w-full justify-between",
-          summaryClass
+          customClassName.summary
         )}
         onClick={() => {
           setOpenDetails(!openDetails);
         }}
       >
-        <span className={cn("flex gap-3 items-center", spamClass)}>
+        <span className={cn("flex gap-3 items-center", customClassName.span)}>
           {startIcon && startIcon}
           {title}
           {endIcon && endIcon}
