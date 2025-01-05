@@ -1,3 +1,10 @@
+# [0.6.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.5.0...v0.6.0) (2025-01-05)
+
+
+### Features
+
+* **Toaster:** add Toaster and ToasterProvider components; update README and add icons ([5967bb5](https://github.com/Laszlo-Caballero/ComponentsLa/commit/5967bb56d5f1f5f39283843278d99a1eafca620b))
+
 # [0.5.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.4.0...v0.5.0) (2025-01-05)
 
 
