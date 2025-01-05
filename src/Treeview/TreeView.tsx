@@ -22,7 +22,7 @@ export const TreeView: FC<TreeViewProps> = ({
   return (
     <div className="w-full">
       <div
-        className="flex items-center py-2 hover:bg-gray-100"
+        className="flex items-center py-2 hover:bg-gray-100 cursor-pointer"
         onClick={() => {
           setOpenTreeView(!openTreeView);
           onClick?.();
