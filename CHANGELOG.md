@@ -1,3 +1,10 @@
+# [0.9.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.8.0...v0.9.0) (2025-01-05)
+
+
+### Features
+
+* **Carousel:** add customClass support and optional previous/next icons for improved customization ([2c2d8d4](https://github.com/Laszlo-Caballero/ComponentsLa/commit/2c2d8d4686501845d831f7dcfb058af503d1c24c))
+
 # [0.8.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.7.1...v0.8.0) (2025-01-05)
 
 
