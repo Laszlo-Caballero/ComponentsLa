@@ -27,7 +27,6 @@ export const ToasterProvider: FC<HTMLAttributes<HTMLDivElement>> = ({
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("se ejecuto");
       if (toasts.length > 0) {
         setToast((prev) => {
           const newToast = [...prev];
