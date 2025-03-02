@@ -21,6 +21,7 @@ export { Table } from "./Table/Table";
 export { useForm } from "./Hooks/useForms";
 export { OutsideContainer } from "./Hooks/OutsideClick";
 export { useMutation } from "./Hooks/useMutation";
+export { useQuery } from "./Hooks/useQuery";
 export { useTable } from "./Hooks/useTable";
 export { Toast } from "./Toaster/ToastApi";
 
