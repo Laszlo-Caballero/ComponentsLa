@@ -85,7 +85,7 @@ export default function Page() {
     - [x] Arreglar el classItem
     - [x] disable
     - [x] iconos predeterminados ❓
-  - [ ] Tablas ❔
+  - [x] Tablas ❔
   - [x] Menu
     - [ ] Posicionarse arriba, abajo, izquierda, derecha totalmente
     - [ ] Para mantener las variantes debe haber un outline, text y el contained

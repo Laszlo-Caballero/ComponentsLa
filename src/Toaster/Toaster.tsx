@@ -1,9 +1,12 @@
+"use client";
 import { cva, VariantProps } from "class-variance-authority";
-import { Toast } from "./ToasterProvider";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
+import { CheckCircleIcon } from "../Icons/CheckCircleIcon";
+import { ErrorCircleIcon } from "../Icons/ErrorCircleIcon";
+import { toastObserver } from "./ToastObserver";
 import { cn } from "../utils/cn";
 
-const toasterClass = cva("absolute  z-[1000] flex flex-col gap-y-4", {
+const toasterClass = cva("absolute z-[1000] flex flex-col gap-y-4", {
   variants: {
     size: {
       sm: "w-40",
@@ -29,14 +32,34 @@ export const Toaster: FC<VariantProps<typeof toasterClass>> = ({
   size,
   position,
 }) => {
-  const { toasts } = Toast();
+  const [toasts, setToasts] = useState(toastObserver.getToasts());
+
+  useEffect(() => {
+    const unsubscribe = toastObserver.subscribe(() => {
+      setToasts([...toastObserver.getToasts()]);
+    });
+    return unsubscribe;
+  }, []);
 
   return (
     <div className={cn(toasterClass({ size, position }))}>
-      {toasts?.map((toast, index) => {
+      {toasts.map((toast, index) => {
         return (
           <div key={index} className="bg-white p-2 rounded-md w-full shadow-md">
-            {toast}
+            {toast.type === "success" && (
+              <span className="flex items-center gap-x-2">
+                <CheckCircleIcon className="w-4 h-4 text-green-500" />
+                {toast.message}
+              </span>
+            )}
+            {toast.type === "error" && (
+              <span className="flex items-center gap-x-2">
+                <ErrorCircleIcon className="w-4 h-4 text-red-500" />
+                {toast.message}
+              </span>
+            )}
+
+            {toast.type === "custom" && toast.message}
           </div>
         );
       })}

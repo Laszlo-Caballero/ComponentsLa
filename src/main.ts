@@ -14,11 +14,15 @@ export { Tab } from "./Tabs/Tab";
 export { Aside } from "./Aside/Aside";
 export { TreeView } from "./Treeview/TreeView";
 export { TreeItem } from "./Treeview/TreeItem";
-export { ToasterProvider } from "./Toaster/ToasterProvider";
-export { Toast } from "./Toaster/ToasterProvider";
 export { Toaster } from "./Toaster/Toaster";
+export { Table } from "./Table/Table";
 
 //Hooks
 export { useForm } from "./Hooks/useForms";
 export { OutsideContainer } from "./Hooks/OutsideClick";
 export { useMutation } from "./Hooks/useMutation";
+export { useTable } from "./Hooks/useTable";
+export { Toast } from "./Toaster/ToastApi";
+
+// types
+export { type ColumnDef } from "./types/types";
