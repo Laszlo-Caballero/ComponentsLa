@@ -1,3 +1,11 @@
+# [0.11.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.10.0...v0.11.0) (2025-03-02)
+
+
+### Features
+
+* **Hooks:** add useMutation hook for handling asynchronous mutations ([97a93fd](https://github.com/Laszlo-Caballero/ComponentsLa/commit/97a93fd4ff5c566ddfa20e2c4c8549e55be25087))
+* **Hooks:** export useMutation hook from Hooks module ([3efe791](https://github.com/Laszlo-Caballero/ComponentsLa/commit/3efe791a2c7fd6a51337210c8aaf5ffe9b5d7d70))
+
 # [0.10.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.9.0...v0.10.0) (2025-03-02)
 
 
