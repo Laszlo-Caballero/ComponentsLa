@@ -78,6 +78,8 @@ export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
     return (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
+      setErrors({});
+
       const errorsDataValidate = validate?.(values);
 
       if (errorsDataValidate && Object.keys(errorsDataValidate).length > 0) {
