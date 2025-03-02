@@ -1,3 +1,10 @@
+# [0.14.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.13.0...v0.14.0) (2025-03-02)
+
+
+### Features
+
+* agregar nueva funcionalidad para la gestión de usuarios ([0f8ca08](https://github.com/Laszlo-Caballero/ComponentsLa/commit/0f8ca08639a1f282b127881bee46c8987cf32e08))
+
 # [0.13.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.12.1...v0.13.0) (2025-03-02)
 
 
