@@ -34,7 +34,7 @@ export const Menu: FC<MenuProps> = ({
   return (
     open && (
       <div className={cn(menu({ variant, className }))} {...props}>
-        <ul className="flex flex-col gap-y-2 ">{children}</ul>
+        <ul className="flex flex-col gap-y-2">{children}</ul>
       </div>
     )
   );
