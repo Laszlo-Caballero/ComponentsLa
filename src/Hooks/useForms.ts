@@ -86,6 +86,8 @@ export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
       }
 
       try {
+        console.log("values", values);
+        console.log("zodSchema", zodSchema);
         zodSchema?.parse(values);
       } catch (error) {
         if (error instanceof ZodError) {
