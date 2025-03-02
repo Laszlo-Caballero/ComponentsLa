@@ -1,3 +1,11 @@
+## [0.12.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.12.0...v0.12.1) (2025-03-02)
+
+
+### Bug Fixes
+
+* **package:** downgrade peer dependencies to React 18.3.1 ([e38e6ad](https://github.com/Laszlo-Caballero/ComponentsLa/commit/e38e6add419ca7cdcc879146eaefdb314070eccb))
+* **package:** update peer dependencies to React 19.0.0 ([a8d3b9c](https://github.com/Laszlo-Caballero/ComponentsLa/commit/a8d3b9cd98dea7e9256006fe9de04ad292e5eeb2))
+
 # [0.12.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.11.0...v0.12.0) (2025-03-02)
 
 
