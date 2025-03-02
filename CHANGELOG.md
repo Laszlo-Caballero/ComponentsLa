@@ -1,3 +1,10 @@
+## [0.15.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.0...v0.15.1) (2025-03-02)
+
+
+### Bug Fixes
+
+* **useForm:** mejorar manejo de errores utilizando safeParse de Zod ([97c0106](https://github.com/Laszlo-Caballero/ComponentsLa/commit/97c0106c0c5d70317a75ccf7ac0b60f8bb9f0a6d))
+
 # [0.15.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.14.1...v0.15.0) (2025-03-02)
 
 
