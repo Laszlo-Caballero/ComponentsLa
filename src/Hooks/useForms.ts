@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useCallback, useState } from "react";
-import { ZodError, ZodObject, ZodRawShape } from "zod";
+import { ZodObject, ZodRawShape } from "zod";
 
 interface Props<T> {
   initialValues: T;
@@ -85,25 +85,22 @@ export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
         return;
       }
 
-      try {
-        console.log("values", values);
-        console.log("zodSchema", zodSchema);
-        zodSchema?.parse(values);
-      } catch (error) {
-        if (error instanceof ZodError) {
-          const keys = Object.keys(error.formErrors.fieldErrors);
-          keys.forEach((key) => {
-            setErrors((prev) => {
-              return {
-                ...prev,
-                [key]: error.formErrors.fieldErrors[key]?.[0],
-              };
-            });
+      const errors = zodSchema?.safeParse(values);
+      console.log(errors);
+      if (errors?.success === false) {
+        const keys = Object.keys(errors.error.formErrors.fieldErrors);
+        keys.forEach((key) => {
+          setErrors((prev) => {
+            return {
+              ...prev,
+              [key]: errors.error.formErrors.fieldErrors[key]?.[0],
+            };
           });
+        });
 
-          return;
-        }
+        return;
       }
+
       setErrors({});
       cb(values);
     };
