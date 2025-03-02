@@ -1,3 +1,10 @@
+# [0.13.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.12.1...v0.13.0) (2025-03-02)
+
+
+### Features
+
+* **Hooks:** export useQuery hook for data fetching ([69bf904](https://github.com/Laszlo-Caballero/ComponentsLa/commit/69bf90482ff166fdf5719296c00b042679e90d3d))
+
 ## [0.12.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.12.0...v0.12.1) (2025-03-02)
 
 
