@@ -1,3 +1,10 @@
+# [0.10.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.9.0...v0.10.0) (2025-03-02)
+
+
+### Features
+
+* **Hooks:** add useQuery and useForm hooks for data fetching and form handling ([a258bb3](https://github.com/Laszlo-Caballero/ComponentsLa/commit/a258bb34c821c33008dc2afcea99b86fbe8c5487))
+
 # [0.9.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.8.0...v0.9.0) (2025-01-05)
 
 
