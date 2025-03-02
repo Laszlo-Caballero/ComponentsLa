@@ -1,3 +1,10 @@
+# [0.12.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.11.0...v0.12.0) (2025-03-02)
+
+
+### Features
+
+* **Table:** add Table component and related hooks for dynamic table rendering ([7d315a7](https://github.com/Laszlo-Caballero/ComponentsLa/commit/7d315a7a50e53cb1c1b1427d059acce63b031b7b))
+
 # [0.11.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.10.0...v0.11.0) (2025-03-02)
 
 
