@@ -1,3 +1,10 @@
+# [0.15.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.14.1...v0.15.0) (2025-03-02)
+
+
+### Features
+
+* agregar logs para depuración en el hook useForm ([4edc36a](https://github.com/Laszlo-Caballero/ComponentsLa/commit/4edc36ad4d11a338b3d9214b54a654b0e79c3302))
+
 ## [0.14.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.14.0...v0.14.1) (2025-03-02)
 
 
