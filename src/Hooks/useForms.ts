@@ -86,7 +86,6 @@ export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
       }
 
       const errors = zodSchema?.safeParse(values);
-      console.log(errors);
       if (errors?.success === false) {
         const keys = Object.keys(errors.error.formErrors.fieldErrors);
         keys.forEach((key) => {
