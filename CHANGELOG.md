@@ -1,3 +1,11 @@
+## [0.15.2](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.1...v0.15.2) (2025-03-02)
+
+
+### Bug Fixes
+
+* **useForm:** eliminar log de errores en el manejo de validación ([2fcb346](https://github.com/Laszlo-Caballero/ComponentsLa/commit/2fcb346eff5414747b5ec1bc9a7a5b31ad2de35a))
+* **useForm:** reiniciar errores al enviar el formulario ([8eb8d52](https://github.com/Laszlo-Caballero/ComponentsLa/commit/8eb8d521235525cdcec03108d84bb91e1f2175b4))
+
 ## [0.15.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.0...v0.15.1) (2025-03-02)
 
 
