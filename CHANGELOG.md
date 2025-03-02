@@ -1,3 +1,10 @@
+## [0.14.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.14.0...v0.14.1) (2025-03-02)
+
+
+### Bug Fixes
+
+* **vite plugins:** se arreglo los plugins de tailwind ([f10fabd](https://github.com/Laszlo-Caballero/ComponentsLa/commit/f10fabde5b3f96807c5ae3e1b7d0d47f2dddce9a))
+
 # [0.14.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.13.0...v0.14.0) (2025-03-02)
 
 
