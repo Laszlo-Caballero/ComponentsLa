@@ -2,15 +2,21 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 import tailwindcss from "@tailwindcss/vite";
+import preserveUseClientDirective from "rollup-plugin-preserve-use-client";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [tailwindcss(), react(), dts({ rollupTypes: true })],
+  plugins: [
+    tailwindcss(),
+    react(),
+    dts({ rollupTypes: true }),
+    preserveUseClientDirective(),
+  ],
   build: {
     lib: {
       entry: {
         index: "./src/main.ts",
-        client: "./src/client/index.ts",
+        hooks: "./src/hooks/index.ts",
       },
       name: "componentsLa",
       fileName: (format, entry) => `${entry}.${format}.js`,

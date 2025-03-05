@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes } from "react";
 import { useTabs } from "./TabsProvider";
-import { cn } from "../../utils/cn";
+import { cn } from "../utils/cn";
 
 interface TabProps extends HTMLAttributes<HTMLDivElement> {
   index: number;

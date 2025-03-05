@@ -1,4 +1,4 @@
-import { useTable } from "../Hooks/useTable";
+import { useTable } from "../hooks";
 import { ColumnDef } from "../types/types";
 import { cn } from "../utils/cn";
 

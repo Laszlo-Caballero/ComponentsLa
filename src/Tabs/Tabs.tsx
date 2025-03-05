@@ -1,8 +1,8 @@
 "use client";
 import { FC, HTMLAttributes } from "react";
 import { TabsProvider, useTabs } from "./TabsProvider";
-import { cn } from "../../utils/cn";
-import { Button } from "../../main";
+import { cn } from "../utils/cn";
+import { Button } from "../main";
 
 type CustomClassNameType = {
   conteiner?: string;
