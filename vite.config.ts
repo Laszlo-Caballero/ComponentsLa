@@ -16,7 +16,6 @@ export default defineConfig({
     lib: {
       entry: {
         index: "./src/main.ts",
-        hooks: "./src/hooks/index.ts",
       },
       name: "componentsLa",
       fileName: (format, entry) => `${entry}.${format}.js`,

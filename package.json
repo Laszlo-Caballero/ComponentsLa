@@ -11,11 +11,6 @@
       "require": "./dist/index.cjs.js",
       "types": "./dist/index.d.ts"
     },
-    "./hooks": {
-      "import": "./dist/hooks.es.js",
-      "require": "./dist/hooks.cjs.js",
-      "types": "./dist/hooks.d.ts"
-    },
     "./style.css": "./dist/style.css"
   },
   "release": {
