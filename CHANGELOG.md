@@ -1,3 +1,10 @@
+## [0.15.3](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.2...v0.15.3) (2025-03-05)
+
+
+### Bug Fixes
+
+* **useForm:** mejorar la validación de errores para subObjetos ([b55b18c](https://github.com/Laszlo-Caballero/ComponentsLa/commit/b55b18ca20fbd2dd5e50e218364c965cd4ab1574))
+
 ## [0.15.2](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.1...v0.15.2) (2025-03-02)
 
 
