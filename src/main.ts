@@ -1,27 +1,29 @@
 import "./index.css";
-export { Button } from "./Button/Button";
-export { Box } from "./Box/Box";
-export { DetailsBox } from "./Details/DetailsBox";
-export { Typography } from "./Typography/Typography";
-export { Menu } from "./Menu/Menu";
-export { MenuItem } from "./Menu/MenuItem";
-export { Carousel } from "./Carousel/Carousel";
-export { Modal } from "./Modal/Modal";
-export { Pagination } from "./Pagination/Pagination";
-export { Nav } from "./Nav/Nav";
-export { Aside } from "./Aside/Aside";
-export { TreeView } from "./Treeview/TreeView";
-export { TreeItem } from "./Treeview/TreeItem";
-export { Toaster } from "./Toaster/Toaster";
-export { Table } from "./Table/Table";
+export * from "./Button/Button";
+export * from "./Box/Box";
+export * from "./Details/DetailsBox";
+export * from "./Typography/Typography";
+export * from "./Menu/Menu";
+export * from "./Menu/MenuItem";
+export * from "./Carousel/Carousel";
+export * from "./Modal/Modal";
+export * from "./Pagination/Pagination";
+export * from "./Nav/Nav";
+export * from "./Aside/Aside";
+export * from "./Treeview/TreeView";
+export * from "./Treeview/TreeItem";
+export * from "./Toaster/Toaster";
+export * from "./Table/Table";
+export * from "./Tabs/Tabs";
+export * from "./Tabs/Tab";
 
 //Hooks
-export { useForm } from "./Hooks/useForms";
-export { OutsideContainer } from "./Hooks/OutsideClick";
-export { useMutation } from "./Hooks/useMutation";
-export { useQuery } from "./Hooks/useQuery";
-export { useTable } from "./Hooks/useTable";
-export { Toast } from "./Toaster/ToastApi";
+export * from "./Hooks/useForms";
+export * from "./Hooks/OutsideClick";
+export * from "./Hooks/useMutation";
+export * from "./Hooks/useQuery";
+export * from "./Hooks/useTable";
+export * from "./Toaster/ToastApi";
 
 // types
-export { type ColumnDef } from "./types/types";
+export * from "./types/types";
