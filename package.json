@@ -5,20 +5,18 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/componentsLaindex.cjs",
-  "module": "./dist/componentsLaindex.js",
   "exports": {
     ".": {
-      "import": "./dist/componentsLaindex.js",
-      "require": "./dist/componentsLaindex.cjs",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js",
       "types": "./dist/index.d.ts"
     },
     "./client": {
-      "import": "./dist/componentsLaclient.es.js",
-      "require": "./dist/componentsLaclient.cjs.js",
+      "import": "./dist/client.es.js",
+      "require": "./dist/client.cjs.js",
       "types": "./dist/client.d.ts"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./style.css": "./dist/style.css"
   },
   "release": {
     "branches": [

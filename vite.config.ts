@@ -10,10 +10,10 @@ export default defineConfig({
     lib: {
       entry: {
         index: "./src/main.ts",
-        client: "./src/client/client.ts",
+        client: "./src/client/index.ts",
       },
       name: "componentsLa",
-      fileName: (format, entry) => `componentsLa${entry}.${format}.js`,
+      fileName: (format, entry) => `${entry}.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
