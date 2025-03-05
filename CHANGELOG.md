@@ -1,3 +1,16 @@
+# [0.18.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.17.1...v0.18.0) (2025-03-05)
+
+
+### Bug Fixes
+
+* **imports:** actualizar rutas de importación en Table y Modal ([52d466b](https://github.com/Laszlo-Caballero/ComponentsLa/commit/52d466b562fd3754647fa9748058aceb70c94529))
+* **imports:** corregir rutas de importación para el uso de Hooks en Modal y Table ([ffa6264](https://github.com/Laszlo-Caballero/ComponentsLa/commit/ffa626427c538641ea5f4f872585ba31100d2fa7))
+
+
+### Features
+
+* **use client:** se agrego el uso de la libreria de cliente para el consumo de servicios ([8a8790d](https://github.com/Laszlo-Caballero/ComponentsLa/commit/8a8790d4af44a89ff23645351e0351e78f85045d))
+
 ## [0.17.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.17.0...v0.17.1) (2025-03-05)
 
 
