@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "../Button/Button";
 import { FC, HTMLAttributes } from "react";
 import { TabsProvider, useTabs } from "./TabsProvider";
