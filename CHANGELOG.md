@@ -1,3 +1,15 @@
+# [0.16.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.5...v0.16.0) (2025-03-05)
+
+
+### Bug Fixes
+
+* **serverV2:** fix input path ([ccc653e](https://github.com/Laszlo-Caballero/ComponentsLa/commit/ccc653edda97a57a33d2297a3e82a2575a3d6b9e))
+
+
+### Features
+
+* **tabs:** implement Tabs and Tab components with context provider ([053b794](https://github.com/Laszlo-Caballero/ComponentsLa/commit/053b79440fc45fa9c5f230efc400aff6047315f1))
+
 ## [0.15.6](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.5...v0.15.6) (2025-03-05)
 
 
