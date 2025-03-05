@@ -1,6 +1,6 @@
 import { Dispatch, FC, HTMLAttributes, SetStateAction } from "react";
 import { cn } from "../utils/cn";
-import { OutsideContainer } from "../hooks/OutsideClick";
+import { OutsideContainer } from "../Hooks/OutsideClick";
 
 interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
