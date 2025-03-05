@@ -1,3 +1,10 @@
+## [0.17.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.17.0...v0.17.1) (2025-03-05)
+
+
+### Bug Fixes
+
+* **package:** reorganize client exports and update paths in package.json ([2634094](https://github.com/Laszlo-Caballero/ComponentsLa/commit/2634094da4db1f5e8c0ad70f8546e0a26e342ab9))
+
 # [0.17.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.16.0...v0.17.0) (2025-03-05)
 
 
