@@ -7,15 +7,16 @@
   ],
   "main": "./dist/componentsLaindex.cjs",
   "module": "./dist/componentsLaindex.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/componentsLaindex.js",
-      "require": "./dist/componentsLaindex.cjs"
+      "require": "./dist/componentsLaindex.cjs",
+      "types": "./dist/index.d.ts"
     },
     "./client": {
       "import": "./dist/componentsLaclient.es.js",
-      "require": "./dist/componentsLaclient.cjs.js"
+      "require": "./dist/componentsLaclient.cjs.js",
+      "types": "./dist/client.d.ts"
     },
     "./dist/style.css": "./dist/style.css"
   },
