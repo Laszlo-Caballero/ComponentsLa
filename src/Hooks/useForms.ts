@@ -89,12 +89,14 @@ export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
 
       const errors = zodSchema?.safeParse(values);
       if (errors?.success === false) {
-        const keys = Object.keys(errors.error.formErrors.fieldErrors);
-        keys.forEach((key) => {
+        errors.error.errors.forEach((error) => {
           setErrors((prev) => {
             return {
               ...prev,
-              [key]: errors.error.formErrors.fieldErrors[key]?.[0],
+              [error.path[0]]: {
+                ...prev[error.path[0] as keyof T],
+                [error.path[1]]: error.message,
+              },
             };
           });
         });

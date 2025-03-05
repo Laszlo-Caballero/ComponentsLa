@@ -112,3 +112,5 @@ export default function Page() {
   - [ ] Añadir iconos
   - [x] Ponerlos en un solo archivo ⚠️
   - [x] Poner prop de color en hexadecimal
+- Hooks
+  - [x] useForm no valida los subObjetos
