@@ -5,12 +5,16 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/componentsLa.cjs",
-  "module": "./dist/componentsLa.js",
+  "main": "./dist/componentsLaindex.cjs",
+  "module": "./dist/componentsLaindex.js",
   "exports": {
     ".": {
-      "import": "./dist/componentsLa.js",
-      "require": "./dist/componentsLa.cjs"
+      "import": "./dist/componentsLaindex.js",
+      "require": "./dist/componentsLaindex.cjs"
+    },
+    "./components/client": {
+      "import": "./dist/componentsLaclient.es.js",
+      "require": "./dist/componentsLaclient.cjs.js"
     },
     "./dist/style.css": "./dist/style.css"
   },

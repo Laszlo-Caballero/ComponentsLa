@@ -14,9 +14,6 @@ export { TreeView } from "./Treeview/TreeView";
 export { TreeItem } from "./Treeview/TreeItem";
 export { Toaster } from "./Toaster/Toaster";
 export { Table } from "./Table/Table";
-export { Tabs } from "./Tabs/Tabs";
-export { Tab } from "./Tabs/Tab";
-
 //Hooks
 export { useForm } from "./Hooks/useForms";
 export { OutsideContainer } from "./Hooks/OutsideClick";
