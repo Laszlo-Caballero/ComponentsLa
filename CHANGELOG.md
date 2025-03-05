@@ -1,3 +1,11 @@
+# [0.17.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.16.0...v0.17.0) (2025-03-05)
+
+
+### Features
+
+* **package:** add TypeScript definitions and update exports path ([842856d](https://github.com/Laszlo-Caballero/ComponentsLa/commit/842856d3cd20e54eca12ec8bb1c44e91409df06c))
+* **package:** add TypeScript definitions to exports in package.json ([8b44841](https://github.com/Laszlo-Caballero/ComponentsLa/commit/8b4484180b42f270725ea44288c54b6c33bfda07))
+
 # [0.16.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.5...v0.16.0) (2025-03-05)
 
 
