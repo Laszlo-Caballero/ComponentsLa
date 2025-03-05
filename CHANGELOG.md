@@ -1,3 +1,10 @@
+## [0.15.4](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.3...v0.15.4) (2025-03-05)
+
+
+### Bug Fixes
+
+* **server?:** intento para funcionar en next js ([7b14f5e](https://github.com/Laszlo-Caballero/ComponentsLa/commit/7b14f5e8f2f238c1c646f0e84c04e241bf009c17))
+
 ## [0.15.3](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.2...v0.15.3) (2025-03-05)
 
 
