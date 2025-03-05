@@ -1,3 +1,10 @@
+## [0.15.6](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.5...v0.15.6) (2025-03-05)
+
+
+### Bug Fixes
+
+* **serverV2:** fix input path ([ccc653e](https://github.com/Laszlo-Caballero/ComponentsLa/commit/ccc653edda97a57a33d2297a3e82a2575a3d6b9e))
+
 ## [0.15.5](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.15.4...v0.15.5) (2025-03-05)
 
 
