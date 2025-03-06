@@ -1,3 +1,10 @@
+# [0.21.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.20.0...v0.21.0) (2025-03-06)
+
+
+### Features
+
+* **menu:** agregar componentes Menu, MenuList y MenuItem con lógica de cierre ([0bfe8f8](https://github.com/Laszlo-Caballero/ComponentsLa/commit/0bfe8f82f0cd76a32bdf907602ddf6f97279b223))
+
 # [0.20.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.19.0...v0.20.0) (2025-03-06)
 
 
