@@ -87,10 +87,11 @@ export default function Page() {
     - [x] iconos predeterminados ❓
   - [x] Tablas ❔
   - [x] Menu
-    - [ ] Posicionarse arriba, abajo, izquierda, derecha totalmente
+    - [x] Posicionarse arriba, abajo, izquierda, derecha totalmente
     - [ ] Para mantener las variantes debe haber un outline, text y el contained
-    - [ ] Arreglar el position ⚠️
-    - [ ] Arreglar el open
+    - [x] Arreglar el position ⚠️
+    - [x] Arreglar el open
+    - [x] Solid
   - [x] Tabs
     - [x] Contexto para no pedir el value en cada tab
     - [ ] Vertical Tabs

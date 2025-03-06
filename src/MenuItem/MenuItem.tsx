@@ -1,9 +1,7 @@
 import { FC, HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 
-interface MenuItemProps extends HTMLAttributes<HTMLLIElement> {}
-
-export const MenuItem: FC<MenuItemProps> = ({
+export const MenuItem: FC<HTMLAttributes<HTMLLIElement>> = ({
   children,
   className,
   ...props
