@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import { FC, HTMLAttributes } from "react";
+import { FC, forwardRef, HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 
 type variant = "h1" | "h2" | "h3" | "h4" | "p" | "span";
@@ -24,16 +24,17 @@ interface TypographyProps
     VariantProps<typeof typography> {
   variant: variant;
 }
-export const Typography: FC<TypographyProps> = ({
-  variant: Component = "p",
-  children,
-  className,
-  text,
-  ...rest
-}) => {
+export const Typography: FC<TypographyProps> = forwardRef<
+  HTMLParagraphElement,
+  TypographyProps
+>(({ variant: Component = "p", children, className, text, ...rest }, ref) => {
   return (
-    <Component className={cn(typography({ text }), className)} {...rest}>
+    <Component
+      className={cn(typography({ text }), className)}
+      {...rest}
+      ref={ref}
+    >
       {children}
     </Component>
   );
-};
+});
