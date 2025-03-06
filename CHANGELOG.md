@@ -1,3 +1,10 @@
+# [0.19.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.18.0...v0.19.0) (2025-03-06)
+
+
+### Features
+
+* **solid:** se aplican principios solid y se quitan los iconos ([4dc11b2](https://github.com/Laszlo-Caballero/ComponentsLa/commit/4dc11b20c86a73f93d2ebbad3cf2d5ff643fb32d))
+
 # [0.18.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.17.1...v0.18.0) (2025-03-05)
 
 
