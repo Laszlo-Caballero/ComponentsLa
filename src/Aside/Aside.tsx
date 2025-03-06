@@ -2,7 +2,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { FC, forwardRef, HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 
-const aside = cva("fixed h-full px-4 overflow-x-auto", {
+const aside = cva("sticky top-0 right-0 px-0 h-screen overflow-x-auto", {
   variants: {
     size: {
       sm: "w-52",
