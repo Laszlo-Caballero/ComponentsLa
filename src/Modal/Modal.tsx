@@ -1,36 +1,31 @@
-import { Dispatch, FC, HTMLAttributes, SetStateAction } from "react";
+import { FC, HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
-import { OutsideContainer } from "../Hooks/OutsideClick";
+import { useCloseDiv } from "../main";
 
 interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
-  classNameContainer?: string;
+  setIsOpen?: (value: boolean) => void;
 }
 
 export const Modal: FC<ModalProps> = ({
   children,
   className,
-  classNameContainer,
   open = false,
   setIsOpen,
   ...props
 }) => {
+  const ref = useCloseDiv({ closeFunction: setIsOpen });
+
   return (
     open && (
       <div
         className={cn(
-          "absolute top-0 left-0 w-full h-full z-[1000] flex items-center justify-center backdrop-blur-sm",
-          classNameContainer
+          "fixed top-0 left-0 w-full min-h-screen z-[1000] flex items-center justify-center backdrop-blur-sm",
+          className
         )}
         {...props}
       >
-        <OutsideContainer
-          setIsOpen={setIsOpen}
-          className={cn("flex items-center justify-center", className)}
-        >
-          {children}
-        </OutsideContainer>
+        <div ref={ref}>{children}</div>
       </div>
     )
   );

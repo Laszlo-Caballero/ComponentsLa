@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { toastObserver } from "./ToastObserver";
+import { toastObserver } from "../Toaster/ToastObserver";
 
 export const Toast = {
   success: (message: string, duration = 3000) =>

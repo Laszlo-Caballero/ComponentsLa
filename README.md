@@ -63,8 +63,12 @@ export default function Page() {
     - [x] componente polymorfico
   - [ ] Listas
   - [x] Treeview (https://mdbootstrap.com/docs/standard/plugins/tree-view/)
+    - [x] Solid
   - [ ] Tooltip
   - [x] Toaster (https://react-hot-toast.com/)
+    - [x] Sin Contexto
+    - [x] Observer
+    - [x] Toast api
   - [x] Carrusel
     - [ ] resposive desing
     - [x] claseNames dentro del componente y mejorar el cn
@@ -75,7 +79,8 @@ export default function Page() {
     - [x] any en el interfaz del as ❔
     - [x] pedir iconos y eliminar componentsla-icons ⚠️
     - [ ] iconos predeterminados ❓
-  - [x] Modal window
+  - [x] Modal
+    - [x] Solid
   - [x] Paginacion
     - [x] custom Icon y eliminar componentsla-icons ⚠️
     - [x] Icon FirstButton y LastButton con sus funcionalidades
