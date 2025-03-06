@@ -1,5 +1,7 @@
 # Components La
 
+## Version 1.0.0
+
 Libreria de componentes de react basado en **Material Ui**,
 creado con el hecho de aprender a hacer una libreria y usarlo en mis
 proximos proyectos
