@@ -1,3 +1,10 @@
+# [0.20.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.19.0...v0.20.0) (2025-03-06)
+
+
+### Features
+
+* **tabs:** implementar nuevo componente Tabs y refactorizar lógica de TabsProvider ([ed065fb](https://github.com/Laszlo-Caballero/ComponentsLa/commit/ed065fb8c45ad551c7da9c04631a4dd0e29640bc))
+
 # [0.19.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.18.0...v0.19.0) (2025-03-06)
 
 
