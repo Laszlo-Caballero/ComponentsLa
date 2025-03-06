@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from "react";
+import { FC, forwardRef, HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 import { cva, VariantProps } from "class-variance-authority";
 
@@ -23,8 +23,12 @@ interface NavProps
   extends HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof nav> {}
 
-export const Nav: FC<NavProps> = ({ children, className, size, display }) => {
-  return (
-    <nav className={cn(nav({ size, display }), className)}>{children}</nav>
-  );
-};
+export const Nav: FC<NavProps> = forwardRef<HTMLDivElement, NavProps>(
+  ({ children, className, size, display }, ref) => {
+    return (
+      <nav className={cn(nav({ size, display }), className)} ref={ref}>
+        {children}
+      </nav>
+    );
+  }
+);
