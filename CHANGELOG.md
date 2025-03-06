@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.0.0...v1.0.1) (2025-03-06)
+
+
+### Bug Fixes
+
+* **version:** update version to 1.0.1 ([cd5b4ba](https://github.com/Laszlo-Caballero/ComponentsLa/commit/cd5b4ba10ebcf89cc365b6f3f6cd84332bac2273))
+
 # [1.0.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.23.0...v1.0.0) (2025-03-06)
 
 
