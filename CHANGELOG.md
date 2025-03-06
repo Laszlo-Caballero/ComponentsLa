@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.0.2...v1.0.3) (2025-03-06)
+
+
+### Bug Fixes
+
+* **Tabs:** actualizar la función onChangeTab para aceptar un valor numérico ([9936ff4](https://github.com/Laszlo-Caballero/ComponentsLa/commit/9936ff4b5ebb266b19193dc15afa17bfbe4b419b))
+
 ## [1.0.2](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.0.1...v1.0.2) (2025-03-06)
 
 
