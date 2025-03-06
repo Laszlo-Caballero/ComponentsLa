@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.0.1...v1.0.2) (2025-03-06)
+
+
+### Bug Fixes
+
+* **Aside:** actualizar estilos para que el componente sea sticky y ocupe toda la altura de la pantalla ([f0339f6](https://github.com/Laszlo-Caballero/ComponentsLa/commit/f0339f67758c1ba3209e31d1b1bb958c1d9bd7ec))
+
 ## [1.0.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.0.0...v1.0.1) (2025-03-06)
 
 
