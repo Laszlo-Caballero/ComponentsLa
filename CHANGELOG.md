@@ -1,3 +1,10 @@
+## [0.21.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.21.0...v0.21.1) (2025-03-06)
+
+
+### Performance Improvements
+
+* **Solid:** se aplicaron los principios solid y se lanza la version 1.0.0 ([1b564d9](https://github.com/Laszlo-Caballero/ComponentsLa/commit/1b564d9d6b0d0260f649f42e421f2eb75c206eb6))
+
 # [0.21.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.20.0...v0.21.0) (2025-03-06)
 
 
