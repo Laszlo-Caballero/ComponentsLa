@@ -94,9 +94,13 @@ export default function Page() {
   - [x] Tabs
     - [x] Contexto para no pedir el value en cada tab
     - [ ] Vertical Tabs
+    - [x] Solid
   - [x] Aside
-    - [ ] position fixed
+    - [x] position fixed
     - [ ] grid colums 1 creo xd 1fr auto 1fr para el header y footer
+    - [x] Solid
+  - [x] Details
+    - [x] Solid
 - Universal
   - [ ] Animaciones
   - [ ] Standar de colores

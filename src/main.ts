@@ -11,6 +11,13 @@ export { Aside } from "./Aside/Aside";
 export { AsideHeader } from "./Aside/AsideHeader";
 export { AsideFooter } from "./Aside/AsideFooter";
 
+//Tabs
+export { Tab } from "./Tab/Tab";
+export { Tabs } from "./Tabs/Tabs";
+export { TabsContainer } from "./Tabs/TabsContainer";
+export { TabHeader } from "./TabHeader/TabHeader";
+export { TabHeaderItem } from "./TabHeader/TabHeaderItem";
+
 //No solid :D
 export { Button } from "./Button/Button";
 export { Box } from "./Box/Box";

@@ -1,71 +1,42 @@
 "use client";
-import { FC, HTMLAttributes } from "react";
-import { TabsProvider, useTabs } from "./TabsProvider";
+import { FC, HTMLAttributes, useState, createContext, useContext } from "react";
 import { cn } from "../utils/cn";
-import { Button } from "../main";
 
-type CustomClassNameType = {
-  conteiner?: string;
-  headers?: {
-    container?: string;
-    item?: string;
-  };
-  children?: string;
+type TabsContextType = {
+  value: number;
+  onChangeTabProvider: (number: number) => void;
 };
+const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
-interface TabsProps extends HTMLAttributes<HTMLDivElement> {
-  headers: string[];
-  value?: number;
-  customClassName?: CustomClassNameType;
-  onChangeTab?: (number: number) => void;
+interface TabsProviderProps extends HTMLAttributes<HTMLDivElement> {
+  children?: React.ReactNode;
+  initialValue?: number;
 }
 
-export const ContainerTabs: FC<TabsProps> = ({
-  headers,
-  customClassName,
+export const Tabs: FC<TabsProviderProps> = ({
   children,
-  onChangeTab,
+  initialValue,
+  ...props
 }) => {
-  const { onChangeTabProvider, value } = useTabs();
+  const [value, setValue] = useState<number>(initialValue || 0);
+  const onChangeTabProvider = (number: number) => {
+    setValue(number);
+  };
 
   return (
-    <div className={cn("flex flex-col w-full", customClassName?.conteiner)}>
-      <div
-        className={cn(
-          "flex border-b border-b-slate-500",
-          customClassName?.headers?.container
-        )}
-      >
-        {" "}
-        {headers.map((item, index) => {
-          return (
-            <Button
-              className={cn(
-                "px-8 rounded-none",
-                value == index && "border-b text-blue-400 border-b-blue-400",
-                customClassName?.headers?.item
-              )}
-              onClick={() => {
-                onChangeTab?.(index);
-
-                onChangeTabProvider(index);
-              }}
-              key={index}
-            >
-              {item}
-            </Button>
-          );
-        })}
+    <TabsContext.Provider value={{ value, onChangeTabProvider }}>
+      <div className={cn("flex flex-col w-full", props.className)} {...props}>
+        {children}
       </div>
-      <div className={cn("w-full", customClassName?.children)}>{children}</div>
-    </div>
+    </TabsContext.Provider>
   );
 };
 
-export const Tabs: FC<TabsProps> = ({ value, ...props }) => {
-  return (
-    <TabsProvider initialValue={value}>
-      <ContainerTabs {...props} />
-    </TabsProvider>
-  );
+// eslint-disable-next-line react-refresh/only-export-components
+export const useTabs = () => {
+  const context = useContext(TabsContext);
+  if (context === undefined) {
+    throw new Error("useTabs must be used within a TabsProvider");
+  }
+  return context;
 };
