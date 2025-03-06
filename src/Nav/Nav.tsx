@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, ReactElement } from "react";
+import { FC, HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 import { cva, VariantProps } from "class-variance-authority";
 
@@ -21,24 +21,10 @@ const nav = cva("w-full p-4", {
 
 interface NavProps
   extends HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof nav> {
-  startIcon?: ReactElement;
-  endIcon?: ReactElement;
-}
+    VariantProps<typeof nav> {}
 
-export const Nav: FC<NavProps> = ({
-  children,
-  startIcon,
-  endIcon,
-  className,
-  size,
-  display,
-}) => {
+export const Nav: FC<NavProps> = ({ children, className, size, display }) => {
   return (
-    <nav className={cn(nav({ size, display }), className)}>
-      {startIcon && startIcon}
-      {children}
-      {endIcon && endIcon}
-    </nav>
+    <nav className={cn(nav({ size, display }), className)}>{children}</nav>
   );
 };

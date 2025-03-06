@@ -1,5 +1,5 @@
 import { cva, VariantProps } from "class-variance-authority";
-import { FC, HTMLAttributes, ReactNode } from "react";
+import { FC, HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 
 const aside = cva("h-full px-4 overflow-x-auto", {
@@ -26,10 +26,7 @@ const aside = cva("h-full px-4 overflow-x-auto", {
 
 interface AsideProps
   extends HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof aside> {
-  header?: ReactNode;
-  footer?: ReactNode;
-}
+    VariantProps<typeof aside> {}
 
 export const Aside: FC<AsideProps> = ({
   size,
@@ -37,16 +34,10 @@ export const Aside: FC<AsideProps> = ({
   outline,
   children,
   className,
-  header,
-  footer,
 }) => {
   return (
     <aside className={cn(aside({ size, display, outline }), className)}>
-      {header && <div className="w-full py-4">{header}</div>}
-
       {children}
-
-      {footer && <div className="w-full mt-auto">{footer}</div>}
     </aside>
   );
 };
