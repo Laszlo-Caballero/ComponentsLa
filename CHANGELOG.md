@@ -1,3 +1,10 @@
+# [0.23.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.22.0...v0.23.0) (2025-03-06)
+
+
+### Features
+
+* **Typography:** agregar soporte para referencias usando forwardRef ([f9f8192](https://github.com/Laszlo-Caballero/ComponentsLa/commit/f9f8192f6b7600634d0fe48b66bde2e823d0b5f8))
+
 # [0.22.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.21.1...v0.22.0) (2025-03-06)
 
 
