@@ -1,3 +1,10 @@
+# [0.22.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.21.1...v0.22.0) (2025-03-06)
+
+
+### Features
+
+* **Box:** agregar soporte para referencias usando forwardRef ([561257a](https://github.com/Laszlo-Caballero/ComponentsLa/commit/561257a1a051d7812cb3581936025ac8402f4597))
+
 ## [0.21.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.21.0...v0.21.1) (2025-03-06)
 
 
