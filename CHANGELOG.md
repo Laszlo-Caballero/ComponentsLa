@@ -1,3 +1,15 @@
+# [1.0.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.23.0...v1.0.0) (2025-03-06)
+
+
+### Performance Improvements
+
+* **version:** 1.0.0 ([ca7b39c](https://github.com/Laszlo-Caballero/ComponentsLa/commit/ca7b39ca78622a006e187443df8b73d84e90fa87))
+
+
+### BREAKING CHANGES
+
+* **version:** Principios Solid Con el fin de mejorar la calidad del código y la escalabilidad del proyecto, se han aplicado los principios SOLID. Esto ha conllevado a la modificación de la estructura de los archivos y la forma en la que se importan y exportan los módulos.
+
 # [0.23.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v0.22.0...v0.23.0) (2025-03-06)
 
 
