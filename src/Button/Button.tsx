@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FC } from "react";
+import { ButtonHTMLAttributes, FC, forwardRef } from "react";
 import { cn } from "../utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -36,30 +36,39 @@ interface ButtonProps
   disabled?: boolean;
 }
 
-export const Button: FC<ButtonProps> = ({
-  className,
-  children,
-  variant,
-  disabled,
-  colorVariant,
-  size,
-  text,
-  ...props
-}) => {
-  return (
-    <button
-      className={cn(
-        button({ variant, colorVariant, size, text }),
+export const Button: FC<ButtonProps> = forwardRef<
+  HTMLButtonElement,
+  ButtonProps
+>(
+  (
+    {
+      className,
+      children,
+      variant,
+      disabled,
+      colorVariant,
+      size,
+      text,
+      ...props
+    },
+    ref
+  ) => {
+    return (
+      <button
+        ref={ref}
+        className={cn(
+          button({ variant, colorVariant, size, text }),
 
-        disabled && variant === "text" && "text-gray-400",
-        disabled && variant === "contained" && "text-gray-400 bg-gray-700",
-        disabled && variant === "outline" && "text-gray-400 border-gray-500",
-        className
-      )}
-      {...props}
-      disabled={disabled}
-    >
-      {children}
-    </button>
-  );
-};
+          disabled && variant === "text" && "text-gray-400",
+          disabled && variant === "contained" && "text-gray-400 bg-gray-700",
+          disabled && variant === "outline" && "text-gray-400 border-gray-500",
+          className
+        )}
+        {...props}
+        disabled={disabled}
+      >
+        {children}
+      </button>
+    );
+  }
+);
