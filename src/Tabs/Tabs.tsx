@@ -10,21 +10,24 @@ const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 interface TabsProviderProps extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
-  initialValue?: number;
+  value?: number;
+  onChangeTab?: (number: number) => void;
 }
 
 export const Tabs: FC<TabsProviderProps> = ({
   children,
-  initialValue,
+  value,
+  onChangeTab,
   ...props
 }) => {
-  const [value, setValue] = useState<number>(initialValue || 0);
+  const [valueTab, setValue] = useState<number>(value || 0);
   const onChangeTabProvider = (number: number) => {
     setValue(number);
+    onChangeTab?.(number);
   };
 
   return (
-    <TabsContext.Provider value={{ value, onChangeTabProvider }}>
+    <TabsContext.Provider value={{ value: valueTab, onChangeTabProvider }}>
       <div className={cn("flex flex-col w-full", props.className)} {...props}>
         {children}
       </div>

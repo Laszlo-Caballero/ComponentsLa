@@ -4,7 +4,7 @@ import { cn } from "../utils/cn";
 import { useTabs } from "../Tabs/Tabs";
 
 export interface TabHeaderItemProps extends HTMLAttributes<HTMLSpanElement> {
-  onChangeTab?: () => void;
+  onChangeTab?: (value: number) => void;
   index?: number;
   className?: string;
 }
@@ -26,7 +26,7 @@ export const TabHeaderItem: FC<TabHeaderItemProps> = ({
         className
       )}
       onClick={() => {
-        onChangeTab?.();
+        onChangeTab?.(value);
       }}
     >
       {children}
