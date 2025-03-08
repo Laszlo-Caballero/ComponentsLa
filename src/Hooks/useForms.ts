@@ -1,16 +1,16 @@
 import { ChangeEvent, FormEvent, useCallback, useState } from "react";
 import { ZodObject, ZodRawShape } from "zod";
+import { ValidateReturn } from "../types/types";
 
 interface Props<T> {
   initialValues: T;
-  validate?: (data: T) => Partial<T>;
+  validate?: (data: T) => ValidateReturn<T>;
   zodSchema?: ZodObject<ZodRawShape>;
 }
 
 export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
   const [values, setValues] = useState<T>(initialValues || ({} as T));
   const [errors, setErrors] = useState<Partial<T>>({});
-  const [hasErros, setHasErrors] = useState(false);
 
   const register = (
     input: keyof T
@@ -78,20 +78,7 @@ export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
   const handleSubmit = (cb: (submitValues: T) => void) => {
     return (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      setHasErrors(false);
       setErrors({});
-
-      const errorsDataValidate = validate?.(values);
-
-      if (errorsDataValidate && Object.keys(errorsDataValidate).length > 0) {
-        setErrors((prev) => {
-          return {
-            ...prev,
-            ...errorsDataValidate,
-          };
-        });
-        setHasErrors(true);
-      }
 
       const errors = zodSchema?.safeParse(values);
       if (errors?.success === false) {
@@ -108,15 +95,21 @@ export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
           });
         });
 
-        setHasErrors(true);
-      }
-
-      if (hasErros) {
         return;
       }
 
-      setHasErrors(false);
-      setErrors({});
+      const errorsDataValidate = validate?.(values);
+
+      if (errorsDataValidate && Object.keys(errorsDataValidate).length > 0) {
+        setErrors((prev) => {
+          return {
+            ...prev,
+            ...errorsDataValidate,
+          };
+        });
+        return;
+      }
+
       cb(values);
     };
   };
