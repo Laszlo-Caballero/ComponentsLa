@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.2.0...v1.3.0) (2025-03-08)
+
+
+### Features
+
+* **useForm:** agregar manejo de estado de errores en el hook useForm ([276395e](https://github.com/Laszlo-Caballero/ComponentsLa/commit/276395e26718d673b7c8591169a0dfb58dea1800))
+
 # [1.2.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.1.0...v1.2.0) (2025-03-08)
 
 
