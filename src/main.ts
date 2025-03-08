@@ -53,3 +53,4 @@ export { useDrop } from "./Hooks/useDrop";
 // types
 export { type ColumnDef } from "./types/types";
 export { type ValidateReturn } from "./types/types";
+export { type ModalProps } from "./Modal/Modal";

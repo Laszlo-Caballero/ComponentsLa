@@ -2,7 +2,7 @@ import { FC, HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 import { useCloseDiv } from "../main";
 
-interface ModalProps extends HTMLAttributes<HTMLDivElement> {
+export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
   setIsOpen?: (value: boolean) => void;
 }
