@@ -3,9 +3,14 @@ import { DragEvent, useState } from "react";
 interface DropProps {
   captureFile: (file: File[]) => void;
   onCustomDrop?: (e: DragEvent<HTMLDivElement>) => void;
+  acceptedType?: string;
 }
 
-export function useDrop({ captureFile, onCustomDrop }: DropProps) {
+export function useDrop({
+  captureFile,
+  onCustomDrop,
+  acceptedType,
+}: DropProps) {
   const [dragging, setDragging] = useState(false);
 
   const ParentProps = () => {
@@ -33,6 +38,12 @@ export function useDrop({ captureFile, onCustomDrop }: DropProps) {
           const file = e.dataTransfer.files;
           if (file.length > 0) {
             const files = Array.from(file);
+            files.forEach((file) => {
+              if (acceptedType && file.type !== acceptedType) {
+                return;
+              }
+            });
+
             captureFile(files);
           }
         }
