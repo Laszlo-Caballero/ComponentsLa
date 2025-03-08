@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.4.0...v1.5.0) (2025-03-08)
+
+
+### Features
+
+* **useForm:** actualizar el tipo de estado de errores a ValidateReturn ([60039f6](https://github.com/Laszlo-Caballero/ComponentsLa/commit/60039f68186bcbf2a2e85f5349063178e84013e2))
+
 # [1.4.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.3.0...v1.4.0) (2025-03-08)
 
 
