@@ -48,6 +48,7 @@ export { useMutation } from "./Hooks/useMutation";
 export { useQuery } from "./Hooks/useQuery";
 export { useTable } from "./Hooks/useTable";
 export { useCloseDiv } from "./Hooks/useCloseDiv";
+export { useDrop } from "./Hooks/useDrop";
 
 // types
 export { type ColumnDef } from "./types/types";

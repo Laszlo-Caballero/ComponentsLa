@@ -126,3 +126,5 @@ export default function Page() {
   - [x] Poner prop de color en hexadecimal
 - Hooks
   - [x] useForm no valida los subObjetos
+  - [ ] hacer que en mutate en el onSubmit se entrege la data en la funcion
+  - [x] useDrop
