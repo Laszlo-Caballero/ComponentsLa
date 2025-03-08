@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.1.0...v1.2.0) (2025-03-08)
+
+
+### Features
+
+* **useDrop:** agregar soporte para tipos de archivos aceptados en el hook useDrop ([844f002](https://github.com/Laszlo-Caballero/ComponentsLa/commit/844f00229f33b61ef3eea2c3e06789176bd7d58e))
+
 # [1.1.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.0.4...v1.1.0) (2025-03-08)
 
 
