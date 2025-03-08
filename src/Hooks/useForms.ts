@@ -10,7 +10,7 @@ interface Props<T> {
 
 export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
   const [values, setValues] = useState<T>(initialValues || ({} as T));
-  const [errors, setErrors] = useState<Partial<T>>({});
+  const [errors, setErrors] = useState<ValidateReturn<T>>({});
 
   const register = (
     input: keyof T

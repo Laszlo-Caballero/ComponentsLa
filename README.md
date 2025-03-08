@@ -128,3 +128,4 @@ export default function Page() {
   - [x] useForm no valida los subObjetos
   - [ ] hacer que en mutate en el onSubmit se entrege la data en la funcion
   - [x] useDrop
+    - [ ] inputProps
