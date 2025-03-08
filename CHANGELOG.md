@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.0.3...v1.0.4) (2025-03-08)
+
+
+### Bug Fixes
+
+* **useForms:** mejorar el manejo de errores para establecer mensajes de error correctamente ([9dc0978](https://github.com/Laszlo-Caballero/ComponentsLa/commit/9dc0978e06ca4798dd432159d7f359e8f31023f2))
+
 ## [1.0.3](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.0.2...v1.0.3) (2025-03-06)
 
 
