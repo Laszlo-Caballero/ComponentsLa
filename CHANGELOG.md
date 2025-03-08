@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.0.4...v1.1.0) (2025-03-08)
+
+
+### Features
+
+* **useDrop:** agregar hook useDrop para manejo de arrastre de archivos ([68439f4](https://github.com/Laszlo-Caballero/ComponentsLa/commit/68439f4e7f78ef65ed21770bafdbb84f1da8bb60))
+
 ## [1.0.4](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.0.3...v1.0.4) (2025-03-08)
 
 
