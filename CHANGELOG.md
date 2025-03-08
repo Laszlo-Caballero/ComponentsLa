@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.3.0...v1.4.0) (2025-03-08)
+
+
+### Features
+
+* **useForm:** mejorar la validación de errores al usar el hook useForm ([49c7be4](https://github.com/Laszlo-Caballero/ComponentsLa/commit/49c7be458a7496d5bd9f0e827bb6d8f32150ebea))
+
 # [1.3.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.2.0...v1.3.0) (2025-03-08)
 
 
