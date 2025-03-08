@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.5.0...v1.6.0) (2025-03-08)
+
+
+### Features
+
+* **Modal:** export ModalProps interface for better type management ([2d34221](https://github.com/Laszlo-Caballero/ComponentsLa/commit/2d3422167b987cc11719717cd47519bad5bc3c8d))
+
 # [1.5.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.4.0...v1.5.0) (2025-03-08)
 
 
