@@ -1,3 +1,11 @@
+## [1.7.2](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.7.1...v1.7.2) (2025-03-11)
+
+
+### Bug Fixes
+
+* **hooks:** simplificar la inicialización del estado de errores en useForm ([fde4dd4](https://github.com/Laszlo-Caballero/ComponentsLa/commit/fde4dd4ea9cff7d7a7652a548abc74f8bdc0cb62))
+* **types:** simplificar la definición de ValidateReturn utilizando Partial para mayor flexibilidad ([b4300de](https://github.com/Laszlo-Caballero/ComponentsLa/commit/b4300de27166cee73e75f6ccf395d14cd9f282ce))
+
 ## [1.7.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.7.0...v1.7.1) (2025-03-11)
 
 
