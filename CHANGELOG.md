@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.6.0...v1.7.0) (2025-03-11)
+
+
+### Features
+
+* **useForm:** mejorar la gestión de errores con tipos más precisos en ValidateReturn ([ca2e193](https://github.com/Laszlo-Caballero/ComponentsLa/commit/ca2e19317c8fcc544811083e7bde95f35af7acb9))
+
 # [1.6.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.5.0...v1.6.0) (2025-03-08)
 
 
