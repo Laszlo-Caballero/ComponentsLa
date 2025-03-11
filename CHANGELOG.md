@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.7.0...v1.7.1) (2025-03-11)
+
+
+### Bug Fixes
+
+* **types:** simplificar la definición de ValidateReturn eliminando redundancias ([a26cbd7](https://github.com/Laszlo-Caballero/ComponentsLa/commit/a26cbd709496df20eda322f99f4e0b458fbeff23))
+
 # [1.7.0](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.6.0...v1.7.0) (2025-03-11)
 
 
