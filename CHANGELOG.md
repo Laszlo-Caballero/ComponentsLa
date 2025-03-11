@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.7.2...v1.7.3) (2025-03-11)
+
+
+### Bug Fixes
+
+* **types:** permitir propiedades opcionales en ValidateReturn para mayor flexibilidad ([3650ffc](https://github.com/Laszlo-Caballero/ComponentsLa/commit/3650ffc670323eb7e024bd3480f1073db7d4b0db))
+
 ## [1.7.2](https://github.com/Laszlo-Caballero/ComponentsLa/compare/v1.7.1...v1.7.2) (2025-03-11)
 
 
