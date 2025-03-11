@@ -10,7 +10,9 @@ interface Props<T> {
 
 export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
   const [values, setValues] = useState<T>(initialValues || ({} as T));
-  const [errors, setErrors] = useState<ValidateReturn<T>>({});
+  const [errors, setErrors] = useState<ValidateReturn<T>>(
+    {} as ValidateReturn<T>
+  );
 
   const register = (
     input: keyof T
@@ -78,7 +80,7 @@ export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
   const handleSubmit = (cb: (submitValues: T) => void) => {
     return (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      setErrors({});
+      setErrors({} as ValidateReturn<T>);
 
       const errors = zodSchema?.safeParse(values);
       if (errors?.success === false) {
@@ -109,7 +111,7 @@ export function useForm<T>({ initialValues, zodSchema, validate }: Props<T>) {
         });
         return;
       }
-
+      setErrors({} as ValidateReturn<T>);
       cb(values);
     };
   };

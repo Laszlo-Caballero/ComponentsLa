@@ -9,4 +9,8 @@ export interface ColumnDef<T> {
   footerComponent?: () => ReactNode;
 }
 
-export type ValidateReturn<T> = Partial<Record<keyof T, string>>;
+export type ValidateReturn<T> = {
+  [K in keyof T]:
+    | string
+    | (T[K] extends object ? ValidateReturn<T[K]> : string);
+};
