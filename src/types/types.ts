@@ -10,7 +10,5 @@ export interface ColumnDef<T> {
 }
 
 export type ValidateReturn<T> = {
-  [K in keyof T]:
-    | string
-    | (T[K] extends object ? ValidateReturn<T[K]> : string);
+  [K in keyof T]: T[K] extends object ? ValidateReturn<T[K]> : string;
 };
